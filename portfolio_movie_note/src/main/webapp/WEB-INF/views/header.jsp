@@ -42,7 +42,7 @@
 							<strong class="text_profile_name">${userInfo.u_name}</strong>
 							<p class="text_profile_id">${userInfo.u_id}</p>
 						</div>
-					</a> <a href="/register" class="#side_write"><button
+					</a> <a href="/board/register" class="#side_write"><button
 							class="btn_write">글쓰기</button></a> <a href="/user/logout"
 						class="#side_request btn_apply_author">
 						<button class="btn_request">로그아웃</button>

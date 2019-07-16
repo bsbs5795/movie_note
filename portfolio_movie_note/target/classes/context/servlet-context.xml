@@ -21,14 +21,6 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<beans:bean id="signUpInterceptor" class="net.koreate.interceptor.SignUpInterceptor"></beans:bean>
-	    <interceptors>
-	        <interceptor>
-	            <mapping path="/signUp"/>
-	            <beans:ref bean="signUpInterceptor"/>
-	        </interceptor>
-	    </interceptors>
-	
 	
 	<context:component-scan base-package="net.koreate.controller" />
 	<context:component-scan base-package="net.koreate.service" />
