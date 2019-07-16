@@ -103,59 +103,7 @@
 			<div class="f_r"></div>
 		</div>
 	</div>
-
-	<div id="wrapSideMenu">
-		<main>
-		<button type="button" id="btnCloseSideMenu"
-			class="btn_close_side_menu img_side_menu ico_close f_r text_hide">닫기</button>
-		<div class="wrap_side_profile logout">
-			<div class="logo_service"></div>
-			<p class="slogan">
-				You can make anything<br>by writing
-			</p>
-			<p class="slogan_writer">- C.S.Lewis -</p>
-			<a id="brunchSigninButton" href="/signin" class="#side_request btn_apply_author">
-				<button class="btn_request">영화노트 시작하기</button>
-			</a>
-		</div>
-		<div class="wrap_side_service_menu">
-			<ul>
-				<li>
-					<a class="menu_word4 #side_brunch" href="/">
-						<span class="bar_left"></span>영화노트 홈
-						<span class="bar_right"></span>
-					</a>
-				</li>
-				
-				<li>
-					<a class="menu_word5 #side_now brunchNowLink" href="/now">
-						<span class="bar_left"></span>영화노트 나우
-						<span class="bar_right"></span>
-					</a>
-				</li>
-				
-				<li>
-					<a class="menu_word5 #side_publish brunchPublishLink" href="/publish">
-						<span class="bar_left"></span>영화노트 책방
-						<span class="bar_right"></span>
-					</a>
-				</li>
-			</ul>
-			<div class="wrap_side_setting wrap_find_user">
-				<div class="menu_side_banner" style="padding-bottom: 40px;">
-					<a class="#side_project" href="/special/list">
-						<img style="width: 168px" src="//i1.daumcdn.net/thumb/R336x0/?fname=http://t1.daumcdn.net/brunch/static/img/help/pc/top/side_banner_20171219.png"
-						alt="프로젝트 리스트 바로가기" />
-					</a>
-				</div>
-				<a href="/signin/find_account" class="find_user">계정을 잊어버리셨나요?</a>
-			</div>
-		</div>
-		</main>
-	</div>
 	<hr class="hide">
-	<main id="daumContent">
-
 	<article id="mArticle">
 		<h2 id="daumBody" class="screen_out">영화노트 설정 본문</h2>
 		<div class="bg_start">
