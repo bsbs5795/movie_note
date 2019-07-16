@@ -32,41 +32,18 @@
 		<main>
 		<button type="button" id="btnCloseSideMenu"
 			class="btn_close_side_menu img_side_menu ico_close f_r text_hide">닫기</button>
-		<c:choose>
-			<c:when test="${!empty naverUser}">
+	
 				<div class="wrap_side_profile">
 					<a href="/@@7YHr" class="#side_my brunchHomeLink">
 						<div class="wrap_profile_image">
-							<img class="img_profile" src="${naverUser.profile_image}"
-								alt="프로필이미지">
+							<img class="img_profile" src="${userInfo.profile_image}" alt="프로필이미지">
 						</div>
 						<div class="wrap_profile_info">
-							<strong class="text_profile_name">${naverUser.nickname}</strong>
-							<p class="text_profile_id">${naverUser.email}</p>
-						</div>
-					</a> <a href="/board/register" class="#_write"><button class="btn_write">글쓰기</button></a>
-					<a href="/user/logout" class="#side_request btn_apply_author">
-						<button class="btn_request" id="logout">로그아웃</button>
-					</a> <a
-						class="wrap_side_ico ico_side_likeit text_hide brunchLikeLink #side_likeit"
-						href="/likeit">좋아요</a> <a
-						class="wrap_side_ico ico_side_history text_hide #side_history"
-						href="/me/history">알림</a> <span class="img_side_menu ico_alim_new">NEW</span>
-
-				</div>
-			</c:when>
-			<c:when test="${!empty kakaoUser}">
-				<div class="wrap_side_profile">
-					<a href="/@@7YHr" class="#side_my brunchHomeLink">
-						<div class="wrap_profile_image">
-							<img class="img_profile" src="${kakaoUser.image}" alt="프로필이미지">
-						</div>
-						<div class="wrap_profile_info">
-							<strong class="text_profile_name">${kakaoUser.nickname}</strong>
-							<p class="text_profile_id">${kakaoUser.email}</p>
+							<strong class="text_profile_name">${userInfo.u_name}</strong>
+							<p class="text_profile_id">${userInfo.u_id}</p>
 						</div>
 					</a> <a href="/register" class="#side_write"><button
-							class="btn_write">글쓰기</button></a> <a href="/logout"
+							class="btn_write">글쓰기</button></a> <a href="/user/logout"
 						class="#side_request btn_apply_author">
 						<button class="btn_request">로그아웃</button>
 					</a> <a
@@ -75,8 +52,7 @@
 						class="wrap_side_ico ico_side_history text_hide #side_history"
 						href="/me/history">알림</a> <span class="img_side_menu ico_alim_new">NEW</span>
 				</div>
-			</c:when>
-		</c:choose>
+				
 				<div class="wrap_side_service_menu logout">
 			<ul>
 				<li><a class="menu_word4 #side_home brunchHomeLink"

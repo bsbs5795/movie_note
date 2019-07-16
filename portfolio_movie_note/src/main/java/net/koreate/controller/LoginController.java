@@ -18,12 +18,16 @@ import net.koreate.api.KakaoUserInfo;
 import net.koreate.api.NaverResult;
 import net.koreate.api.NaverUserInfo;
 import net.koreate.service.LoginService;
+import net.koreate.service.UserService;
+import net.koreate.vo.UserVO;
 
 @Controller
 public class LoginController {
 
 	@Inject
 	LoginService service;
+	@Inject
+	UserService us;
 	
 	@RequestMapping(value = "/login")
 	public String naverLogin(Model model,HttpSession session) {
@@ -68,9 +72,22 @@ public class LoginController {
 	    String image = imageAddress[1];
 	    String[] nick = userInfo.get("properties").get("nickname").toString().split("\"");
 	    String nickname = nick[1];
-
-	    KakaoUserInfo user = new KakaoUserInfo(id,email,nickname,image);
-	    session.setAttribute("kakaoUser", user);
+	   
+	    UserVO vo = new UserVO(email,nickname,image);
+	    System.out.println(vo.toString());
+	    if(us.getUserById(email)!=null) {
+	    	 session.setAttribute("userInfo", us.getUserById(vo.getU_id()));
+	    	 System.out.println("NOT NULL : "+us.getUserById(vo.getU_id()).toString());
+	    }else {
+	    	try {
+				us.signUp(vo);
+				session.setAttribute("userInfo", us.getUserById(vo.getU_id()));
+				 System.out.println("NULL : "+us.getUserById(vo.getU_id()).toString());
+				System.out.println();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+	    }
 
 	    return "redirect:/main";
 	  }

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -83,8 +84,8 @@ img {
 <body>
 <jsp:include page="../header.jsp"></jsp:include>
 
-	<form id="registForm" action="/sboard/register" method="post">
-		<input type="hidden" name="uno" value="${userInfo.uno}" />
+	<form id="registForm" action="/board/register" method="post">
+		<input type="hidden" name="u_num" value="${userInfo.uno}" />
 		<table border=1 style="width: 100%;" class="table table-hover table-bordered">
 			<tr>
 				<td>영화 검색</td>
@@ -100,10 +101,13 @@ img {
 					</div>
 				</td>
 			</tr>
+			
 			<tr>
 				<td>작성자</td>
 				<td colspan=2><input type="text" name="writer" value="${naverUser.nickname}" readonly required /></td>
 			</tr>
+			
+			
 			<tr id="movieInfo" style="display: none;"></tr> <!-- 해당 영화 정보 -->
 			<tr>
 				<td>나만의 평점</td>

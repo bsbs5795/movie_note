@@ -17,6 +17,7 @@ CREATE TABLE movie_board(
    b_available   INT DEFAULT 1
 );
 
+ALTER TABLE movie_user ADD profile_image VARCHAR(200);
 
 
 SELECT * FROM board;

@@ -10,12 +10,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import net.koreate.service.LoginService;
 import net.koreate.service.MoiveService;
 import net.koreate.util.PageMaker;
+import net.koreate.vo.BoardVO;
 import net.koreate.vo.MovieVO;
 
 
@@ -30,7 +32,14 @@ public class BoardController {
 	LoginService service;
 	
 	@GetMapping("/register")
-	public void register() {}
+	public void registerGET() {}
+	
+	@PostMapping("/register")
+	public String registerPOST(BoardVO vo) {
+		
+		
+		return "";
+	}
 	
 	@GetMapping("/query")
 	@ResponseBody
