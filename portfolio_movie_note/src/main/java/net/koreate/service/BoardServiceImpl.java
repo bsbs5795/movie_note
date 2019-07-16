@@ -24,5 +24,10 @@ public class BoardServiceImpl implements BoardService{
 	public PageMaker getPageMaker(SearchCriteria cri) throws Exception {
 		return null;
 	}
+	@Override
+	public BoardVO detailView(int b_num) throws Exception {
+		BoardVO vo = dao.detailView(b_num);
+		return vo;
+	}
 
 }

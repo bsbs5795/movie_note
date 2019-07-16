@@ -13,4 +13,6 @@ public interface BoardService {
 	
 	// 페이징 블럭 정보 
 	PageMaker getPageMaker(SearchCriteria cri) throws Exception;
+	
+	BoardVO detailView(int b_num) throws Exception;
 }

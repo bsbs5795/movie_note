@@ -37,9 +37,4 @@ public class HomeController {
 	public String detailViewGET() {
 		return "detailView";
 	}
-
-	
-	
-	
-	
 }

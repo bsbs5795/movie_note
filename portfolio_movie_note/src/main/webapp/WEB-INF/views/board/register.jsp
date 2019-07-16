@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	<c:set var="path" value="${pageContext.request.contextPath}"
+	scope="session" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -178,7 +180,7 @@ img {
 	<jsp:include page="../footer.jsp"></jsp:include>
 <script>
 	/* 에디터 */
-	var path = "${pageContext.request.contextPath}/resources/editor/SmartEditor2Skin.html";
+	var path = "${path}/resources/editor/SmartEditor2Skin.html";
 	var oEditors = [];
 	nhn.husky.EZCreator.createInIFrame({
 		oAppRef : oEditors,
@@ -329,7 +331,6 @@ img {
 			alert("영화 정보를 입력해주세요.")
 		}else{
 			oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
-
 			$("#registForm").submit();
 			location.href="/main"
 		}
