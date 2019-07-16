@@ -24,6 +24,7 @@ public class SqlSessionTest {
 		vo.setU_id("test_id");
 		vo.setU_id("test_pw");
 		vo.setU_id("test_name");
+		System.out.println("^^");
 		try {
 			dao.signUp(vo);
 		} catch (Exception e) {
