@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import net.koreate.service.LoginService;
+import net.koreate.service.BoardService;
 import net.koreate.service.MoiveService;
 import net.koreate.util.PageMaker;
 import net.koreate.vo.BoardVO;
@@ -29,16 +29,15 @@ public class BoardController {
 	@Inject
 	MoiveService ms;
 	@Inject
-	LoginService service;
+	BoardService bs;
 	
 	@GetMapping("/register")
 	public void registerGET() {}
 	
 	@PostMapping("/register")
-	public String registerPOST(BoardVO vo) {
+	public void registerPOST(BoardVO vo) throws Exception {
+		bs.register(vo);
 		
-		
-		return "";
 	}
 	
 	@GetMapping("/query")

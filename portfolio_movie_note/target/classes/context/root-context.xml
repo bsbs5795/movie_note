@@ -31,4 +31,5 @@
 	<mybatis-spring:scan base-package="net.koreate.dao"/>
 	
 	<context:component-scan base-package="net.koreate.service"/>		
+	
 </beans>

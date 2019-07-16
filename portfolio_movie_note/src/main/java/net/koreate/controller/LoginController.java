@@ -43,7 +43,7 @@ public class LoginController {
 		return "/login";
 	}
 	@RequestMapping(value = "/naver/naverCallback")
-	public String naverCallback (Model model, @RequestParam String code, @RequestParam String state, HttpSession session) throws IOException {
+	public String naverCallback (Model model, @RequestParam String code, @RequestParam String state, HttpSession session) throws Exception {
 		System.out.println("NaverCallBack");
 		OAuth2AccessToken oauthToken;
 		oauthToken = service.getNaverAccessToken(session, code, state);
@@ -60,19 +60,15 @@ public class LoginController {
 	    	 session.setAttribute("userInfo", us.getUserById(vo.getU_id()));
 	    	 System.out.println("NOT NULL : "+us.getUserById(vo.getU_id()).toString());
 	    }else {
-	    	try {
 				us.signUp(vo);
 				session.setAttribute("userInfo", us.getUserById(vo.getU_id()));
 				 System.out.println("NULL : "+us.getUserById(vo.getU_id()).toString());
 				System.out.println();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
 	    }
 		return "redirect:/main";
 	}
 	@RequestMapping(value = "/kakao/kakaoCallback")
-	public String kakaoCallback(Model model,@RequestParam String code,HttpSession session) {
+	public String kakaoCallback(Model model,@RequestParam String code,HttpSession session) throws Exception{
 		JsonNode userInfo = service.getKakaoUserInfo(code);
 	    
 	    System.out.println("userInfo : "+userInfo);
@@ -91,14 +87,9 @@ public class LoginController {
 	    	 session.setAttribute("userInfo", us.getUserById(vo.getU_id()));
 	    	 System.out.println("NOT NULL : "+us.getUserById(vo.getU_id()).toString());
 	    }else {
-	    	try {
 				us.signUp(vo);
 				session.setAttribute("userInfo", us.getUserById(vo.getU_id()));
 				 System.out.println("NULL : "+us.getUserById(vo.getU_id()).toString());
-				System.out.println();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
 	    }
 
 	    return "redirect:/main";

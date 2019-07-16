@@ -17,7 +17,8 @@ CREATE TABLE movie_board(
    b_available   INT DEFAULT 1
 );
 
-ALTER TABLE movie_user ADD profile_image VARCHAR(200);
+ALTER TABLE movie_user DROP profile_image;
+ALTER TABLE movie_user ADD profile_image VARCHAR(200) DEFAULT "../../resources/img/img_profile.png";
 
 
 SELECT * FROM board;

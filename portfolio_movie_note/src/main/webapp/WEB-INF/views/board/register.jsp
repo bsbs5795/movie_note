@@ -115,17 +115,17 @@ img {
 					<p>나만의 평점을 등록해보세요</p>
 					<div class="stars stars-example-fontawesome-o">
 						<select id="example-fontawesome-o" name="b_rating" data-current-rating="5.6" >
-							<option value=""></option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10</option>
+							<option value=0	></option>
+							<option value=1>1</option>
+							<option value=2>2</option>
+							<option value=3>3</option>
+							<option value=4>4</option>
+							<option value=5>5</option>
+							<option value=6>6</option>
+							<option value=7>7</option>
+							<option value=8>8</option>
+							<option value=9>9</option>
+							<option value=10>10</option>
 						</select>
 						<span class="title your-rating hidden"> 나의 평점: <span class="value" id="value"></span>&nbsp;</span>
 						<script>
@@ -163,9 +163,11 @@ img {
 			</tr>
 			<tr>
 				<td>내용</td>
-				<td colspan=2><textarea style="width: 100%;" name="content" id="content" rows=3></textarea></td>
+				<td colspan=2><textarea style="width: 100%;" name="b_content" id="content" rows=3></textarea></td>
 			</tr>
 		</table>
+			<input type="hidden" name="b_movieinfo" class="movieinfo" /> 
+			<input type="hidden" name="b_title" class="title" />
 
 		<div class="sB">
 		
@@ -178,7 +180,13 @@ img {
 	/* 에디터 */
 	var path = "${pageContext.request.contextPath}/resources/editor/SmartEditor2Skin.html";
 	var oEditors = [];
-	nhn.husky.EZCreator.createInIFrame(oEditors,"content",path,"createSEditor2");
+	nhn.husky.EZCreator.createInIFrame({
+		oAppRef : oEditors,
+		elPlaceHolder :"content",
+		sSkinURI : path,
+		fCreator : "createSEditor2",
+		htParams: { fOnBeforeUnload : function(){}}
+	});
 	
 	/* replaceAll */
 	String.prototype.replaceAll = function(org, dest) {
@@ -303,7 +311,9 @@ img {
 	 	$("#movieInfo").html(html);
 		$("#movieInfo").show();
 		$("#myModal").css("display","none");
-		$("#movieTitle").val(title);
+		$(".title").val(title);
+		$(".movieinfo").val(html);
+		console.log(html);
 		console.log(title);
 	});
 	
@@ -313,6 +323,17 @@ img {
          $("#myModal").css("display", "none");
       }
    });
+	
+	$("#saveBtn").click(function(){
+		if($(".movieinfo").val()==""){
+			alert("영화 정보를 입력해주세요.")
+		}else{
+			oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
+
+			$("#registForm").submit();
+			location.href="/main"
+		}
+	});
 </script>
 </body>
 </html>
