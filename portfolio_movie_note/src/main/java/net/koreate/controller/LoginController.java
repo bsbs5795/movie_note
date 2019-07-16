@@ -54,9 +54,21 @@ public class LoginController {
 		NaverResult naverResult = gson.fromJson(apiResult, NaverResult.class);
 		System.out.println("naverResult : "+naverResult);
 		NaverUserInfo user = naverResult.getResponse();
-		session.setAttribute("naverUser", user);
-		System.out.println(user);
+		UserVO vo = new UserVO(user.getEmail(),user.getNickname(),user.getProfile_image());
 		
+		 if(us.getUserById(user.getEmail())!=null) {
+	    	 session.setAttribute("userInfo", us.getUserById(vo.getU_id()));
+	    	 System.out.println("NOT NULL : "+us.getUserById(vo.getU_id()).toString());
+	    }else {
+	    	try {
+				us.signUp(vo);
+				session.setAttribute("userInfo", us.getUserById(vo.getU_id()));
+				 System.out.println("NULL : "+us.getUserById(vo.getU_id()).toString());
+				System.out.println();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+	    }
 		return "redirect:/main";
 	}
 	@RequestMapping(value = "/kakao/kakaoCallback")
