@@ -5,6 +5,7 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 
 import net.koreate.dao.UserDAO;
+import net.koreate.vo.LoginDTO;
 import net.koreate.vo.UserVO;
 
 @Service
@@ -22,6 +23,16 @@ public class UserServiceImpl implements UserService {
 	public UserVO getUserById(String u_id) {
 		UserVO vo = dao.getUserById(u_id);
 		return vo;
+	}
+	
+	@Override
+	public boolean loginCheck(LoginDTO dto) throws Exception {
+		UserVO vo = dao.loginCheck(dto);
+		boolean loginCheck = false;
+		if(vo != null) {
+			loginCheck = true;
+		}
+		return loginCheck;
 	}
 
 }

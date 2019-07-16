@@ -4,6 +4,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
+import net.koreate.vo.LoginDTO;
 import net.koreate.vo.UserVO;
 
 @Repository
@@ -17,5 +18,7 @@ public interface UserDAO {
 	@Select("SELECT * FROM movie_user WHERE u_id=#{u_id}")
 	UserVO getUserById(String u_id);
 	
+	@Select("SELECT * FROM movie_user WHERE u_id = #{u_id} AND u_pw = #{u_pw}")
+	UserVO loginCheck(LoginDTO dto) throws Exception;
 	
 }

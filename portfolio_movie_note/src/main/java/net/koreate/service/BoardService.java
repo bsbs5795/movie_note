@@ -2,8 +2,6 @@ package net.koreate.service;
 
 import java.util.List;
 
-import org.aspectj.org.eclipse.jdt.internal.core.nd.field.FieldSearchIndex.SearchCriteria;
-
 import net.koreate.util.PageMaker;
 import net.koreate.vo.BoardVO;
 
@@ -14,9 +12,10 @@ public interface BoardService {
 	void register(BoardVO vo) throws Exception;
 	
 	// 페이징 블럭 정보 
-	PageMaker getPageMaker(SearchCriteria cri) throws Exception;
+	PageMaker getPageMaker(int u_num, int page) throws Exception;
 	
-	List<BoardVO> listBoard(SearchCriteria cri) throws Exception;
+	List<BoardVO> listBoard(int u_num,PageMaker pageMaker) throws Exception;
 	
 	BoardVO detailView(int b_num) throws Exception;
+	
 }

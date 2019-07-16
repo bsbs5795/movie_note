@@ -3,7 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<c:set var="path" value="${pageContext.request.contextPath}" scope="session" />
+<c:set var="path" value="${pageContext.request.contextPath}"
+	scope="session" />
 
 
 <!DOCTYPE html>
@@ -21,7 +22,8 @@
 <meta property="fb:app_id" content="313683402170826">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Free HTML5 Template by FreeHTML5.co" />
-<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+<meta name="keywords"
+	content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
 <meta name="author" content="FreeHTML5.co" />
 <meta property="og:title" content="" />
 <meta property="og:image" content="" />
@@ -35,23 +37,36 @@
 
 <!-- Modernizr JS -->
 <script src="${path}/resources/js/login/modernizr-2.6.2.min.js"></script>
-<link rel="SHORTCUT ICON" href="//t1.daumcdn.net/brunch/static/icon/favicon/favicon64_150520.ico" />
-<link rel="apple-touch-icon-precomposed" sizes="180x180" href="//t1.daumcdn.net/brunch/static/icon/ios/icon152.png">
-<link rel="apple-touch-icon-precomposed" sizes="152x152" href="//t1.daumcdn.net/brunch/static/icon/ios/icon152.png">
-<link rel="apple-touch-icon-precomposed" sizes="120x120" href="//t1.daumcdn.net/brunch/static/icon/ios/icon120.png">
+<link rel="SHORTCUT ICON"
+	href="//t1.daumcdn.net/brunch/static/icon/favicon/favicon64_150520.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="180x180"
+	href="//t1.daumcdn.net/brunch/static/icon/ios/icon152.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152"
+	href="//t1.daumcdn.net/brunch/static/icon/ios/icon152.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120"
+	href="//t1.daumcdn.net/brunch/static/icon/ios/icon120.png">
 <!--[if lt IE 9]>
     <script src="//t1.daumcdn.net/brunch/static/libraries/js/jquery.min-1.11.3.js"></script>
 <![endif]-->
 <!--[if gte IE 9]><!-->
-<script type="text/javascript" src="//t1.daumcdn.net/brunch/static/libraries/js/jquery.min-2.1.1.js"></script>
+<script type="text/javascript"
+	src="//t1.daumcdn.net/brunch/static/libraries/js/jquery.min-2.1.1.js"></script>
 <!--<![endif]-->
-<script type="text/javascript" src="//t1.daumcdn.net/brunch/static/libraries/js/jquery.cookie.min-1.4.1.js"></script>
-<script type="text/javascript" src="//t1.daumcdn.net/brunch/static/libraries/js/jquery.xdomainrequest.min.js"></script>
-<script type="text/javascript" src="//t1.daumcdn.net/brunch/static/libraries/js/handlebars.runtime.min-v3.0.0.js"></script>
-<script type="text/javascript" src="//t1.daumcdn.net/brunch/static/libraries/js/userAgent.min-1.0.14.js"></script>
-<script type="text/javascript" src="//t1.daumcdn.net/brunch/static/libraries/js/raven.min.3.17.0.js"></script>
-<script type="text/javascript" src="//t1.daumcdn.net/brunch/static/libraries/js/clipboard.min.js"></script>
-<script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+<script type="text/javascript"
+	src="//t1.daumcdn.net/brunch/static/libraries/js/jquery.cookie.min-1.4.1.js"></script>
+<script type="text/javascript"
+	src="//t1.daumcdn.net/brunch/static/libraries/js/jquery.xdomainrequest.min.js"></script>
+<script type="text/javascript"
+	src="//t1.daumcdn.net/brunch/static/libraries/js/handlebars.runtime.min-v3.0.0.js"></script>
+<script type="text/javascript"
+	src="//t1.daumcdn.net/brunch/static/libraries/js/userAgent.min-1.0.14.js"></script>
+<script type="text/javascript"
+	src="//t1.daumcdn.net/brunch/static/libraries/js/raven.min.3.17.0.js"></script>
+<script type="text/javascript"
+	src="//t1.daumcdn.net/brunch/static/libraries/js/clipboard.min.js"></script>
+<script type="text/javascript"
+	src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js"
+	charset="utf-8"></script>
 <script type="text/javascript">
 	/**
 	 * Tiara 내부에서 사용 하는 Message Queue 정의
@@ -68,10 +83,11 @@
 <link rel="stylesheet" type="text/css"
 	href="${path}/resources/css/main/B.css" />
 
-<script type="text/javascript" src="//t1.daumcdn.net/brunch/static/libraries/js/jquery.word-break-keep-all.min-1.3.0.js"></script>
-<link rel="stylesheet" type="text/css" href="//t1.daumcdn.net/brunch/static/real/201907031443/product/B.Message.min.css" />
+<script type="text/javascript"
+	src="//t1.daumcdn.net/brunch/static/libraries/js/jquery.word-break-keep-all.min-1.3.0.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="//t1.daumcdn.net/brunch/static/real/201907031443/product/B.Message.min.css" />
 <script type="text/javascript">
-
 	if ('undefined' != typeof Raven) {
 		Raven
 				.config(
@@ -82,20 +98,31 @@
 	}
 </script>
 
-<link rel="stylesheet" type="text/css" href="//t1.daumcdn.net/brunch/static/real/201907031443/product/B.Font.min.css" />
-<link rel="stylesheet" type="text/css" href="${path}/resources/css/main/B.Sign.min.css" />
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="${path}/resources/css/login/bootstrap.min.css" type='text/css'>
-<link rel="stylesheet" href="${path}/resources/css/login/animate.css" type='text/css'>
-<link rel="stylesheet" href="${path}/resources/css/login/style.css" type='text/css'>
-<link rel="stylesheet" href="${path}/resources/css/main/c.css" type='text/css'>
+<link rel="stylesheet" type="text/css"
+	href="//t1.daumcdn.net/brunch/static/real/201907031443/product/B.Font.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="${path}/resources/css/main/B.Sign.min.css" />
+<link
+	href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet"
+	href="${path}/resources/css/login/bootstrap.min.css" type='text/css'>
+<link rel="stylesheet" href="${path}/resources/css/login/animate.css"
+	type='text/css'>
+<link rel="stylesheet" href="${path}/resources/css/login/style.css"
+	type='text/css'>
+<link rel="stylesheet" href="${path}/resources/css/main/c.css"
+	type='text/css'>
 <script src="${path}/resources/js/jquery.validate.js"></script>
 
 <style>
-	.error{
-	color:red;
-	}
+.error {
+	color: red;
+}
 </style>
+<script>
+	var message = '${message}';
+</script>
 </head>
 
 <body class="brunch_start">
@@ -122,20 +149,18 @@
 				복잡한 절차 없이 SNS 계정으로<br /> 간편하게 영화노트를 만나보세요!
 			</p>
 			<ul class="list_start">
-				<li><a href="#" class="link_connect link_br" id="login">
-				<span class="ico_br"></span> <span
-						class="txt_connect txt_br">영화노트로 시작하기</span>
+				<li><a href="#" class="link_connect link_br" id="login"> <span
+						class="ico_br"></span> <span class="txt_connect txt_br">영화노트로
+							시작하기</span>
 				</a></li>
-				 <!-- 네이버아이디로로그인 버튼 노출 영역 -->
- 				<li><a href="${naverUrl}"class="link_connect link_na">
-					<span class="ico_na"></span>
-					<span class="txt_connect txt_na">네이버로 시작하기</span>
-				</a>
-				</li>
-				<li><a
-					href="${kakaoUrl}"
-					class="link_connect link_ka"> <span class="ico_signin ico_ka"></span>
-						<span class="txt_connect txt_ka">카카오로 시작하기</span>
+				<!-- 네이버아이디로로그인 버튼 노출 영역 -->
+				<li><a href="${naverUrl}" class="link_connect link_na"> <span
+						class="ico_na"></span> <span class="txt_connect txt_na">네이버로
+							시작하기</span>
+				</a></li>
+				<li><a href="${kakaoUrl}" class="link_connect link_ka"> <span
+						class="ico_signin ico_ka"></span> <span class="txt_connect txt_ka">카카오로
+							시작하기</span>
 				</a></li>
 			</ul>
 			<div class="wrap_find_user" id="loginMain2">
@@ -145,16 +170,15 @@
 
 		<!-- 로그인창 -->
 		<div class="container" id="loginForm"
-			style="position: absolute; top: 100px; width: 100%; display: none; ">
+			style="position: absolute; top: 100px; width: 100%; display: none;">
 			<div class="row">
-				<div class="col-md-12 text-center">
-				</div>
+				<div class="col-md-12 text-center"></div>
 			</div>
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4">
 					<!-- Start Sign In Form -->
-					<form action="/user/signIn" class="fh5co-form animate-box" id="form"
-						data-animate-effect="fadeIn">
+					<form action="/user/signInPost" class="fh5co-form animate-box"
+						id="form" data-animate-effect="fadeIn" method="post">
 						<h2>로그인</h2>
 						<div class="form-group">
 							<label for="username" class="sr-only">이메일</label> <input
@@ -188,9 +212,8 @@
 			<div class="row" style="padding-top: 60px; clear: both;">
 				<div class="col-md-12 text-center">
 					<p>
-						<small>
-						<span style="color:green;">&copy; All Rights Reserved. Designed by</span> <a
-							href="https://freehtml5.co">FreeHTML5.co</a></small>
+						<small> <span style="color: green;">&copy; All
+								Rights Reserved. Designed by</span> <a href="https://freehtml5.co">FreeHTML5.co</a></small>
 					</p>
 				</div>
 			</div>
@@ -199,38 +222,41 @@
 		<div class="container" id="signUp"
 			style="position: absolute; top: 100px; width: 100%; display: none;">
 			<div class="row">
-				<div class="col-md-12 text-center">
-				</div>
+				<div class="col-md-12 text-center"></div>
 			</div>
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4">
 					<!-- Start Sign In Form -->
-					<form action="/user/signUp" method="post" id="signUpForm" class="fh5co-form animate-box"
-						data-animate-effect="fadeIn" onsubmit="return check()">
+					<form action="/user/signUp" method="post" id="signUpForm"
+						class="fh5co-form animate-box" data-animate-effect="fadeIn"
+						onsubmit="return check()">
 						<h2>회원가입</h2>
 						<div class="form-group">
 							<div class="alert alert-success" role="alert">Your info has
 								been saved.</div>
 						</div>
 						<div class="form-group">
-							<label for="name" class="sr-only">이름</label> <input type="text" name="u_name"
-								 class="form-control signUp" id="name" placeholder="이름 또는 닉네임"
-								autocomplete="off" alt="이름">
+							<label for="name" class="sr-only">이름</label> <input type="text"
+								name="u_name" class="form-control signUp" id="name"
+								placeholder="이름 또는 닉네임" autocomplete="off" alt="이름">
 						</div>
 						<div class="form-group">
 							<label for="email" class="sr-only">이메일</label> <input
-								type="email" class="form-control signUp" id="email" placeholder="example@gmail.com" name="u_id"
-								autocomplete="off" alt="아이디">
+								type="email" class="form-control signUp" id="email"
+								placeholder="example@gmail.com" name="u_id" autocomplete="off"
+								alt="아이디">
 						</div>
 						<div class="form-group">
 							<label for="password" class="sr-only">비밀번호</label> <input
-								type="password" name="u_pw" class="form-control signUp" id="jPassword"
-								placeholder="비밀번호" autocomplete="off" alt="비밀번호">
+								type="password" name="u_pw" class="form-control signUp"
+								id="jPassword" placeholder="비밀번호" autocomplete="off" alt="비밀번호">
 						</div>
 						<div class="form-group">
-							<label for="re-password" class="sr-only">비밀번호 확인</label>
-							<input type="password" class="form-control signUp" id="re-password"
+							<label for="re-password" class="sr-only">비밀번호 확인</label> <input
+								type="password" class="form-control signUp" id="re-password"
 								placeholder="비밀번호 확인" autocomplete="off" alt="비밀번호 확인">
+							<input name="profile_image" type="hidden"
+								value="../../resources/img/img_profile.png" />
 						</div>
 						<div class="form-group">
 							<p>
@@ -248,8 +274,8 @@
 			<div class="row" style="padding-top: 60px; clear: both;">
 				<div class="col-md-12 text-center">
 					<p>
-						<small><span style="color:green;">&copy; All Rights Reserved. Designed by</span> <a
-							href="https://freehtml5.co">FreeHTML5.co</a></small>
+						<small><span style="color: green;">&copy; All
+								Rights Reserved. Designed by</span> <a href="https://freehtml5.co">FreeHTML5.co</a></small>
 					</p>
 				</div>
 			</div>
@@ -258,33 +284,33 @@
 	</main>
 
 	<hr class="hide">
-		<script>
-	$.validator.setDefaults({
-	submitHandler : function(){
-		$("#form").submit();
-	}
-});
-	$("#form").validate({
-		rules : {
-			u_id : {
-				required: true,
-				email : true
-			},
-			u_pw : {
-				required : true
+	<script>
+		$.validator.setDefaults({
+			submitHandler : function() {
+				$("#form").submit();
 			}
-		},
-		messages : {
-			u_id : {
-				required : "이메일(아이디)를 작성해주세요",
-				email : "올바른 아이디 형식이 아닙니다."
+		});
+		$("#form").validate({
+			rules : {
+				u_id : {
+					required : true,
+					email : true
+				},
+				u_pw : {
+					required : true
+				}
 			},
-			u_pw : {
-				required : "비밀번호를 작성해 주세요"
+			messages : {
+				u_id : {
+					required : "이메일(아이디)를 작성해주세요",
+					email : "올바른 아이디 형식이 아닙니다."
+				},
+				u_pw : {
+					required : "비밀번호를 작성해 주세요"
+				}
 			}
-		}
-	});
-</script>
+		});
+	</script>
 	<script type="text/javascript"
 		src="//t1.daumcdn.net/brunch/static/real/201907031443/product/B.min.js"></script>
 	<script src="//developers.kakao.com/sdk/js/kakao.min.js?v=2"></script>
@@ -353,9 +379,9 @@
 			B.Sign.Signin.initialize();
 		});
 	</script>
-	
-	
-	
+
+
+
 	<script>
 		$("#sugnUpBtn").click(function(event) {
 			event.preventDefault();
@@ -382,9 +408,9 @@
 			});
 		});
 	</script>
-	
-	
-	
+
+
+
 	<script type="text/javascript">
 		//티아라 스크립트
 		_tiq.push([ '__setPageName', 'sidebar' ]);
@@ -405,32 +431,32 @@
 			s.appendChild(se);
 		})(document);
 	</script>
-	
+
 	<script>
-	function check(){
-		var input = document.getElementsByClassName('signUp');
-		for(var i=0; i<input.length; i++){
-			if(input[i].value == ""){
-				alert(input[i].alt + "를 작성해주세요!");
-				input[i].focus();
+		function check() {
+			var input = document.getElementsByClassName('signUp');
+			for (var i = 0; i < input.length; i++) {
+				if (input[i].value == "") {
+					alert(input[i].alt + "를 작성해주세요!");
+					input[i].focus();
+					return false;
+				}
+			}
+
+			var pw = $("#jPassword").val();
+			var r_pw = $("#re-password").val();
+
+			if (pw != r_pw) {
+				alert("비밀번호와 비밀번호확인이 일치하지 않습니다.");
+				$("#re-password").val("");
+				$("#re-password").focus();
 				return false;
 			}
 		}
-		
-		var pw = $("#jPassword").val();
-		var r_pw = $("#re-password").val();
-		
-		if(pw != r_pw){
-			alert("비밀번호와 비밀번호확인이 일치하지 않습니다.");
-			$("#re-password").val("");
-			$("#re-password").focus();
-			return false;
-		}
-	}
 	</script>
 	<script>
 		var message = "${message}";
-		if(message != null && message != ""){
+		if (message != null && message != "") {
 			alert(message);
 		}
 	</script>
