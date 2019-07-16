@@ -11,10 +11,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import net.koreate.service.BoardService;
 import net.koreate.service.LoginService;
 import net.koreate.util.PageMaker;
+import net.koreate.vo.BoardVO;
 
 @Controller
 public class HomeController {
@@ -61,8 +63,9 @@ public class HomeController {
 	
 	
 	
-	@GetMapping("detailView")
-	public String detailViewGET() {
-		return "detailView";
+	@GetMapping("/detailView")
+	public void detailView(@RequestParam(value="b_num") int b_num, Model model) throws Exception {
+		BoardVO vo = bs.detailView(b_num);
+		model.addAttribute("boardVO", vo);
 	}
 }

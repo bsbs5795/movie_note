@@ -35,18 +35,19 @@ public class BoardServiceImpl implements BoardService{
 		
 		return pageMaker;
 	}
-	@Override
-	public BoardVO detailView(int b_num) throws Exception {
-		BoardVO vo = dao.detailView(b_num);
-		return vo;
-	}
 
+		
 	@Override
 	public List<BoardVO> listBoard(int u_num ,PageMaker pageMaker) throws Exception {
 		List<BoardVO> list = new ArrayList<>();
 		dao.listBoard(u_num,pageMaker.getCri());
 		
-		return null;
+		return list;
+	}
+	@Override
+	public BoardVO detailView(int b_num) throws Exception {
+		BoardVO vo = dao.detailView(b_num);
+		return vo;
 	}
 
 }
