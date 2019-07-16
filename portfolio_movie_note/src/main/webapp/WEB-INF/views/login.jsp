@@ -150,12 +150,12 @@
 						data-animate-effect="fadeIn">
 						<h2>로그인</h2>
 						<div class="form-group">
-							<label for="username" class="sr-only">Username</label> <input
+							<label for="username" class="sr-only">이메일</label> <input
 								type="text" class="form-control" id="username"
 								placeholder="example@gmail.com" autocomplete="off">
 						</div>
 						<div class="form-group">
-							<label for="password" class="sr-only">Password</label> <input
+							<label for="password" class="sr-only">비밀번호</label> <input
 								type="password" class="form-control" id="password"
 								placeholder="Password" autocomplete="off">
 						</div>
@@ -200,38 +200,38 @@
 					<!-- Start Sign In Form -->
 					<form action="/user/signUp" method="post" id="signUpForm" class="fh5co-form animate-box"
 						data-animate-effect="fadeIn" onsubmit="return check()">
-						<h2>Sign Up</h2>
+						<h2>회원가입</h2>
 						<div class="form-group">
 							<div class="alert alert-success" role="alert">Your info has
 								been saved.</div>
 						</div>
 						<div class="form-group">
-							<label for="name" class="sr-only">Name</label> <input type="text" name="u_name"
-								 class="form-control signUp" id="name" placeholder="Name"
+							<label for="name" class="sr-only">이름</label> <input type="text" name="u_name"
+								 class="form-control signUp" id="name" placeholder="이름 또는 닉네임"
 								autocomplete="off" alt="이름">
 						</div>
 						<div class="form-group">
-							<label for="email" class="sr-only">Email</label> <input
-								type="email" class="form-control signUp" id="email" placeholder="Email" name="u_id"
+							<label for="email" class="sr-only">이메일</label> <input
+								type="email" class="form-control signUp" id="email" placeholder="example@gmail.com" name="u_id"
 								autocomplete="off" alt="아이디">
 						</div>
 						<div class="form-group">
-							<label for="password" class="sr-only">Password</label> <input
+							<label for="password" class="sr-only">비밀번호</label> <input
 								type="password" name="u_pw" class="form-control signUp" id="jPassword"
-								placeholder="Password" autocomplete="off" alt="비밀번호">
+								placeholder="비밀번호" autocomplete="off" alt="비밀번호">
 						</div>
 						<div class="form-group">
-							<label for="re-password" class="sr-only">Re-type Password</label>
+							<label for="re-password" class="sr-only">비밀번호 확인</label>
 							<input type="password" class="form-control signUp" id="re-password"
-								placeholder="Re-type Password" autocomplete="off" alt="비밀번호 확인">
+								placeholder="비밀번호 확인" autocomplete="off" alt="비밀번호 확인">
 						</div>
 						<div class="form-group">
 							<p>
-								Already registered? <a href="#" id="signIn">Sign In</a>
+								이미 등록되어 있으신가요? <a href="#" id="signIn">로그인</a>
 							</p>
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Sign Up" class="btn btn-primary">
+							<input type="submit" value="회원가입" class="btn btn-primary">
 						</div>
 					</form>
 					<!-- END Sign In Form -->
