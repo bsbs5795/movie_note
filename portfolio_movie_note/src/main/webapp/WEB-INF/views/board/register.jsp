@@ -85,7 +85,7 @@ img {
 <jsp:include page="../header.jsp"></jsp:include>
 
 	<form id="registForm" action="/board/register" method="post">
-		<input type="hidden" name="u_num" value="${userInfo.uno}" />
+		<input type="hidden" name="u_num" value="${userInfo.u_num}" />
 		<table border=1 style="width: 100%;" class="table table-hover table-bordered">
 			<tr>
 				<td>영화 검색</td>
@@ -104,7 +104,7 @@ img {
 			
 			<tr>
 				<td>작성자</td>
-				<td colspan=2><input type="text" name="writer" value="${naverUser.nickname}" readonly required /></td>
+				<td colspan=2><input type="text" name="writer" value="${userInfo.u_name}" readonly required /></td>
 			</tr>
 			
 			
@@ -114,7 +114,7 @@ img {
 				<td colspan="2">
 					<p>나만의 평점을 등록해보세요</p>
 					<div class="stars stars-example-fontawesome-o">
-						<select id="example-fontawesome-o" name="rating" data-current-rating="5.6" >
+						<select id="example-fontawesome-o" name="b_rating" data-current-rating="5.6" >
 							<option value=""></option>
 							<option value="1">1</option>
 							<option value="2">2</option>
