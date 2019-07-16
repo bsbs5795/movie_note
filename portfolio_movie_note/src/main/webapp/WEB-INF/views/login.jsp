@@ -202,11 +202,11 @@
 					<!-- Start Sign In Form -->
 					<form action="#" class="fh5co-form animate-box"
 						data-animate-effect="fadeIn">
-						<h2>Sign In</h2>
+						<h2>로그인</h2>
 						<div class="form-group">
 							<label for="username" class="sr-only">Username</label> <input
 								type="text" class="form-control" id="username"
-								placeholder="Useremail" autocomplete="off">
+								placeholder="example@gmail.com" autocomplete="off">
 						</div>
 						<div class="form-group">
 							<label for="password" class="sr-only">Password</label> <input
@@ -215,17 +215,16 @@
 						</div>
 						<div class="form-group">
 							<label for="remember"><input type="checkbox"
-								id="remember"> Remember Me</label>
+								id="remember">비밀번호 기억하기</label>
 						</div>
 						<div class="form-group">
 							<p>
-								Not registered? <a href="#" id="sugnUpBtn">Sign Up</a> | <a
-									href="forgot.html">Forgot Password?</a>
+								회원이 아니신가요? <a href="#" id="sugnUpBtn">회원가입</a>
 							</p>
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Sign In" class="btn btn-primary">
-							<input type="button" value="back" id="back"
+							<input type="submit" value="로그인" class="btn btn-primary">
+							<input type="button" value="돌아가기" id="back"
 								class="btn btn-primary" />
 						</div>
 					</form>
