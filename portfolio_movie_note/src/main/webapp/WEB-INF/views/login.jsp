@@ -125,8 +125,6 @@
 					<span class="txt_connect txt_na">네이버로 시작하기</span>
 				</a>
 				</li>
- 
- 
 				<li><a
 					href="${kakaoUrl}"
 					class="link_connect link_ka"> <span class="ico_signin ico_ka"></span>
@@ -201,7 +199,7 @@
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4">
 					<!-- Start Sign In Form -->
-					<form action="/signUp" method="post" id="signUpForm" class="fh5co-form animate-box"
+					<form action="/user/signUp" method="post" id="signUpForm" class="fh5co-form animate-box"
 						data-animate-effect="fadeIn" onsubmit="return check()">
 						<h2>Sign Up</h2>
 						<div class="form-group">

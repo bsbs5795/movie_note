@@ -44,8 +44,8 @@
 							<strong class="text_profile_name">${naverUser.nickname}</strong>
 							<p class="text_profile_id">${naverUser.email}</p>
 						</div>
-					</a> <a href="/register" class="#_write"><button class="btn_write">글쓰기</button></a>
-					<a href="/logout" class="#side_request btn_apply_author">
+					</a> <a href="/board/register" class="#_write"><button class="btn_write">글쓰기</button></a>
+					<a href="/user/logout" class="#side_request btn_apply_author">
 						<button class="btn_request" id="logout">로그아웃</button>
 					</a> <a
 						class="wrap_side_ico ico_side_likeit text_hide brunchLikeLink #side_likeit"

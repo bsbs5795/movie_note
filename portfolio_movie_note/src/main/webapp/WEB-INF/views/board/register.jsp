@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css"href="${path}/resources/css/main/B.css" />
-
+<link rel="stylesheet" type="text/css"href="${path}/resources/css/main/B.Top.min.css" />
 <!-- bar-rating -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 <link rel="stylesheet" href="${path}/resources/css/table/fontawesome-stars-o.css">
@@ -21,6 +21,7 @@
 	line-height: 158px;
 }
 .sB{
+	margin-bottom: 100px;
 	margin-top:20px;
 	text-align: center;
 }
@@ -80,7 +81,7 @@ img {
 
 </head>
 <body>
-<jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="../header.jsp"></jsp:include>
 
 	<form id="registForm" action="/sboard/register" method="post">
 		<input type="hidden" name="uno" value="${userInfo.uno}" />
@@ -168,6 +169,7 @@ img {
 				<input type="button" id="listBtn"class="btn btn-info " value="목록으로" />
 		</div>
 	</form>
+	<jsp:include page="../footer.jsp"></jsp:include>
 <script>
 	/* 에디터 */
 	var path = "${pageContext.request.contextPath}/resources/editor/SmartEditor2Skin.html";
