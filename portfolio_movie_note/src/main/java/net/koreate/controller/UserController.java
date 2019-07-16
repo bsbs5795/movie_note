@@ -26,10 +26,13 @@ public class UserController {
 	}
 	@RequestMapping(value = "/logout")
 	public String logout(HttpSession session) {
-		
 		session.invalidate();
 		return "redirect:/";
 	}
-	
-	
+
+	@RequestMapping(value = "/signIn")
+	public String login() {
+			System.out.println("signIn 호출");
+			return "/login";
+	}
 }

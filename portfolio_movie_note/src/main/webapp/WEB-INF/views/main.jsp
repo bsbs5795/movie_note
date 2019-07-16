@@ -304,4 +304,13 @@
 			type="hidden" id="keywordParam" value="영화리뷰"> <input
 			type="hidden" id="pickContentId" value="">
 </body>
+<script>
+	function getPageList(page){
+		$.getJSON("/board/"+page,function(data){
+			
+			
+		});
+	}
+
+</script>
 </html>

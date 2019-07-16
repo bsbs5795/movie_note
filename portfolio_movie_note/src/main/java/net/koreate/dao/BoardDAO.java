@@ -1,9 +1,12 @@
 package net.koreate.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
+import net.koreate.util.Criteria;
 import net.koreate.vo.BoardVO;
 
 @Repository
@@ -14,4 +17,6 @@ public interface BoardDAO {
 	
 	@Select("SELECT * FROM movie_board WHERE b_num=#{b_num}")
 	BoardVO detailView(int b_num) throws Exception;
+	
+	List<BoardVO> listBoard(Criteria cri) throws Exception;
 }

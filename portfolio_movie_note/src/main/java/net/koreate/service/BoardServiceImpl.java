@@ -1,5 +1,7 @@
 package net.koreate.service;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.aspectj.org.eclipse.jdt.internal.core.nd.field.FieldSearchIndex.SearchCriteria;
@@ -28,6 +30,12 @@ public class BoardServiceImpl implements BoardService{
 	public BoardVO detailView(int b_num) throws Exception {
 		BoardVO vo = dao.detailView(b_num);
 		return vo;
+	}
+
+	@Override
+	public List<BoardVO> listBoard(SearchCriteria cri) throws Exception {
+		
+		return null;
 	}
 
 }

@@ -21,5 +21,5 @@ ALTER TABLE movie_user DROP profile_image;
 ALTER TABLE movie_user ADD profile_image VARCHAR(200) DEFAULT "../../resources/img/img_profile.png";
 
 
-SELECT * FROM board;
+SELECT * FROM movie_board;
 SELECT * FROM movie_user;

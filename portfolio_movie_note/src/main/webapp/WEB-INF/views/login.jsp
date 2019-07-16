@@ -89,6 +89,13 @@
 <link rel="stylesheet" href="${path}/resources/css/login/animate.css" type='text/css'>
 <link rel="stylesheet" href="${path}/resources/css/login/style.css" type='text/css'>
 <link rel="stylesheet" href="${path}/resources/css/main/c.css" type='text/css'>
+<script src="${path}/resources/js/jquery.validate.js"></script>
+
+<style>
+	.error{
+	color:red;
+	}
+</style>
 </head>
 
 <body class="brunch_start">
@@ -97,7 +104,7 @@
 		<div class="wrap_inner  ">
 			<div class="f_l">
 				<h1 class="f_l">
-					<a href="/main" class="logo_service text_hide" title="brunch">brunch</a>
+					<a href="/login" class="logo_service text_hide" title="brunch">brunch</a>
 				</h1>
 			</div>
 			<div class="f_r"></div>
@@ -146,17 +153,17 @@
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4">
 					<!-- Start Sign In Form -->
-					<form action="#" class="fh5co-form animate-box"
+					<form action="/user/signIn" class="fh5co-form animate-box" id="form"
 						data-animate-effect="fadeIn">
 						<h2>로그인</h2>
 						<div class="form-group">
 							<label for="username" class="sr-only">이메일</label> <input
-								type="text" class="form-control" id="username"
+								type="text" class="form-control" id="u_id" name="u_id"
 								placeholder="example@gmail.com" autocomplete="off">
 						</div>
 						<div class="form-group">
 							<label for="password" class="sr-only">비밀번호</label> <input
-								type="password" class="form-control" id="password"
+								type="password" class="form-control" id="u_pw" name="u_pw"
 								placeholder="Password" autocomplete="off">
 						</div>
 						<div class="form-group">
@@ -251,6 +258,33 @@
 	</main>
 
 	<hr class="hide">
+		<script>
+	$.validator.setDefaults({
+	submitHandler : function(){
+		$("#form").submit();
+	}
+});
+	$("#form").validate({
+		rules : {
+			u_id : {
+				required: true,
+				email : true
+			},
+			u_pw : {
+				required : true
+			}
+		},
+		messages : {
+			u_id : {
+				required : "이메일(아이디)를 작성해주세요",
+				email : "올바른 아이디 형식이 아닙니다."
+			},
+			u_pw : {
+				required : "비밀번호를 작성해 주세요"
+			}
+		}
+	});
+</script>
 	<script type="text/javascript"
 		src="//t1.daumcdn.net/brunch/static/real/201907031443/product/B.min.js"></script>
 	<script src="//developers.kakao.com/sdk/js/kakao.min.js?v=2"></script>
@@ -400,5 +434,6 @@
 			alert(message);
 		}
 	</script>
+
 </body>
 </html>

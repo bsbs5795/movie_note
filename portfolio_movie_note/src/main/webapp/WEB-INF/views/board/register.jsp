@@ -28,7 +28,7 @@
 	margin-top:20px;
 	text-align: center;
 }
-.actor {
+.actor {	
 	width: 250px;
 }
 
@@ -80,7 +80,13 @@ img {
 #registForm{
 	margin-top: 150px;
 }
+
+#btnServiceMenu{
+	display:none;
+}
+
 </style>
+
 
 </head>
 <body>
