@@ -49,6 +49,18 @@ public class BoardController {
 		model.addAttribute("boardVO", vo);
 		return "/board/detailView";
 	}
+
+	@GetMapping("/query")
+	@ResponseBody
+	public MovieVO query(String query) {
+
+		MovieVO vo = ms.searchMovie(query, 100);
+
+		System.out.println(vo);
+
+		return vo;
+	}
+
 	@GetMapping("/query/{title}/{page}")
 	@ResponseBody
 	public ResponseEntity<Map<String, Object>> listPage(@PathVariable("title") String query,

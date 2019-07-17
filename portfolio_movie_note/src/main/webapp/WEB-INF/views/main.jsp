@@ -268,7 +268,6 @@
 							printPage(data.pageMaker)
 						});
 	}
-	
 	function printPage(pageMaker){
 		var str = "<ul id='pagination' class='pagination'>";
 		if(pageMaker.prev){
