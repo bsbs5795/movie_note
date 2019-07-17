@@ -72,11 +72,4 @@ public class HomeController {
 		return entity;
 	}
 	
-	
-	
-	@GetMapping("/detailView")
-	public void detailView(@RequestParam(value="b_num") int b_num, Model model) throws Exception {
-		BoardVO vo = bs.detailView(b_num);
-		model.addAttribute("boardVO", vo);
-	}
 }

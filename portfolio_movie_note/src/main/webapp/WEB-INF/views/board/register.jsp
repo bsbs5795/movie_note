@@ -339,7 +339,6 @@ img {
 		if($(".movieinfo").val()==""){
 			alert("영화 정보를 입력해주세요.")
 		}else{
-		
 			oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
 			$("#registForm").submit();
 			location.href="/main"

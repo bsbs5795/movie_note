@@ -52,7 +52,7 @@
 	src="${path}/resources/js/main/raven.min.3.17.0.js"></script> 
 <script type="text/javascript"
 	src="${path}/resources/js/main/clipboard.min.js"></script>
-	
+	<link rel="stylesheet" href="${path}/resources/css/table/bootstrap.css">
 
 <link rel="stylesheet" type="text/css"
 	href="${path}/resources/css/main/B.css" />
@@ -66,7 +66,7 @@
 	href="${path}/resources/css/main/B.Font.min.css" />
 <link rel="stylesheet" type="text/css"
 	href="${path}/resources/css/main/B.Keyword.min.css" />
-	<link rel="stylesheet" href="${path}/resources/css/table/bootstrap.css">
+	
 <script>
 	var message = "${message}";
 	if (message != null && message != "") {
@@ -191,7 +191,7 @@
 							</div>
 						</div>
 					</div>
-					<div id="paging" class="paging">
+					<div id="paging" class="paging"style="margin-bottom: 50px;">
 					
 					</div>
 					
@@ -241,7 +241,11 @@
 							console.log(data);
 							var html = "<ul class='list_article list_common'>"
 							for (var i = 0; i < data.list.length; i++) {
-								 html += "<li class='list_has_image animation_up'>";
+								if(data.list[i].b_available == 0){
+			                           html += "<li class='list_has_image animation_up' style='display: none;'>";
+			                        }else{
+			                           html += "<li class='list_has_image animation_up>";
+			                        }
 								html += "<a href='/board/detailView/"+data.list[i].b_num+"' class='link_post'>";
 								html += "<div class='post_thumb'>";
 								if (data.list[i].b_image == "") {

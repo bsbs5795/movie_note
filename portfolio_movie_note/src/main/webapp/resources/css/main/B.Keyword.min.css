@@ -186,7 +186,7 @@ html {
 	overflow: hidden;
 	width: 940px;
 	margin: 0 auto;
-	padding: 30px 0 111px
+	padding: 30px 0 50px;
 }
 
 #wrapHome.wrap-promotion-keyword .wrap_article {
@@ -290,7 +290,7 @@ html {
 	font-size: 20px;
 	letter-spacing: -1px;
 	white-space: nowrap;
-	color:crimson;
+	color:#333;
 }
 
 .wrap_article_list .list_article .link_post:hover .tit_subject {
