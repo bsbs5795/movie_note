@@ -29,7 +29,7 @@ public class BoardServiceImpl implements BoardService{
 
 	@Override
 	public PageMaker getPageMaker(int u_num,int page) throws Exception {
-		Criteria cri = new Criteria(page,10);
+		Criteria cri = new Criteria(page,5);
 		int totalCount = dao.getTotal(u_num);
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setCri(cri);

@@ -327,7 +327,7 @@ html {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	-webkit-box-orient: vertical;
-	padding-top: 6px
+	margin-top: 6px
 }
 
 .wrap_article_list .list_article .article_content {

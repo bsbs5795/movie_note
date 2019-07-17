@@ -66,6 +66,7 @@
 	href="${path}/resources/css/main/B.Font.min.css" />
 <link rel="stylesheet" type="text/css"
 	href="${path}/resources/css/main/B.Keyword.min.css" />
+	<link rel="stylesheet" href="${path}/resources/css/table/bootstrap.css">
 <script>
 	var message = "${message}";
 	if (message != null && message != "") {
@@ -73,6 +74,13 @@
 	}
 </script>
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<style>
+	#pagination{
+	display: table;
+  	margin-left: auto;
+  	margin-right: auto;
+	}
+</style>
 </head>
 <body>
 
@@ -97,7 +105,7 @@
 
 						</div>
 						
-	
+					
 						<div class="wrap_writer_list animation_up_late">
 							<strong class="tit_recommend">추천작가</strong>
 							<div class="search_recommend">
@@ -183,6 +191,10 @@
 							</div>
 						</div>
 					</div>
+					<div id="paging" class="paging">
+					
+					</div>
+					
 				</div>
 				</main>
 			</div>
@@ -216,7 +228,10 @@
 	<input type="hidden" id="keywordParam" value="영화리뷰">
 	<input type="hidden" id="pickContentId" value="">
 </body>
-											<script>
+	<script>
+	
+	
+	
 	getPageList(1);
 
 	function getPageList(page) {
@@ -244,9 +259,31 @@
 								html += "</div></div></a></li>";
 							}
 							html+="</ul>"
-							console.log(html);
+							console.log(data.pageMaker);
 							$("#boardList").html(html);
+							printPage(data.pageMaker)
 						});
 	}
+	
+	function printPage(pageMaker){
+		var str = "<ul id='pagination' class='pagination'>";
+		if(pageMaker.prev){
+			str +="<li><a href='"+(pageMaker.startPage-1)+"'> << </a></li>";
+		}
+		for(var i=pageMaker.startPage;i<=pageMaker.endPage; i++){
+			var strClass = pageMaker.cri.page == i ? "class='active'" : "";
+			str += "<li "+strClass+"><a href='"+i+"' id='page_num'>"+i+"</a></li>";
+			}
+		if(pageMaker.next){
+			str +="<li><a href='"+(pageMaker.endPage+1)+"'> >> </a></li>";
+		}
+		 str +="</ul>";
+		$("#paging").html(str);  
+	}
+	$("#paging").on("click","ul li a",function(event){
+	event.preventDefault();
+	var page = $(this).attr("href");
+	getPageList(page);
+		});
 </script>
 </html>

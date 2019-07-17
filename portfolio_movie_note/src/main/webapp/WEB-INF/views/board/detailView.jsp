@@ -42,7 +42,7 @@
 <script type="text/javascript" src="//t1.daumcdn.net/brunch/static/libraries/js/jquery.xdomainrequest.min.js"></script>
 <script type="text/javascript" src="//t1.daumcdn.net/brunch/static/libraries/js/handlebars.runtime.min-v3.0.0.js"></script>
 <script type="text/javascript" src="//t1.daumcdn.net/brunch/static/libraries/js/userAgent.min-1.0.14.js"></script>
-<script type="text/javascript" src="//t1.daumcdn.net/brunch/static/libraries/js/raven.min.3.17.0.js"></script>
+<script type="text/javascript" src="${path}/resources/js/main/raven.min.3.17.0.js"></script>
 <script type="text/javascript" src="//t1.daumcdn.net/brunch/static/libraries/js/clipboard.min.js"></script>
 
 <script type="text/javascript">
@@ -73,7 +73,6 @@
 						}).install();
 	}
 </script>
-<script type="text/javascript" src="${path}/resources/js/main/jquery.barrating.min.js"></script>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 <link rel="stylesheet" href="${path}/resources/css/table/fontawesome-stars-o.css">
 <link rel="stylesheet" type="text/css" href="//t1.daumcdn.net/brunch/static/real/201907051641/product/B.Font.min.css" />
@@ -144,6 +143,7 @@
 							<option value=10>10</option>
 						</select>
 						<span class="title your-rating hidden"> 나의 평점: <span class="value" id="value"></span>&nbsp;</span>
+						<script type="text/javascript" src="${path}/resources/js/table/jquery.barrating.min.js"></script>
 						<script>
 							$(function() {
 								// start-rating-script
