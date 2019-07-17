@@ -286,10 +286,11 @@ html {
 }
 
 .wrap_article_list .list_article .tit_subject {
-	font-weight: 400;
+	font-weight: bold;
 	font-size: 20px;
 	letter-spacing: -1px;
-	white-space: nowrap
+	white-space: nowrap;
+	color:crimson;
 }
 
 .wrap_article_list .list_article .link_post:hover .tit_subject {

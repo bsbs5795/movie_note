@@ -39,11 +39,15 @@ public class BoardController {
 	public void registerPOST(BoardVO vo) throws Exception {
 		bs.register(vo);
 	}
-
 	@GetMapping("/detailView")
-	public void detailView(@RequestParam(value = "b_num") int b_num, Model model) throws Exception {
+	public void detailView() {
+		
+	}
+	@GetMapping("/detailView/{b_num}")
+	public String detailView(@PathVariable int b_num, Model model) throws Exception {
 		BoardVO vo = bs.detailView(b_num);
 		model.addAttribute("boardVO", vo);
+		return "/board/detailView";
 	}
 
 	@GetMapping("/query")

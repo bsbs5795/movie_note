@@ -101,7 +101,7 @@
 	#wrap_cover{
 	width:100%;
 	height: -webkit-fill-available;
-	background: url('../../../resources/img/toy.jpg') no-repeat;
+	background: url('../../../../resources/img/toy.jpg') no-repeat;
 	background-size: cover; 
 	}
 </style>
@@ -109,7 +109,7 @@
 </head>
 
 <body>
-	<jsp:include page="header.jsp"/>
+	<jsp:include page="../header.jsp"/>
 	<div class="service_contents article_contents #post_view">
 		<div class="wrap_view_article wrap_article article_view_disable_selection ">
 			<div id="wrap_cover"></div>
@@ -242,7 +242,7 @@
 			<div class="wrap_comment_write"></div>
 		</div>
 
-	<jsp:include page="footer.jsp"></jsp:include>
+	<jsp:include page="../footer.jsp"></jsp:include>
 
 
 	<script type="text/javascript"

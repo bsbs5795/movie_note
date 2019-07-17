@@ -174,6 +174,7 @@ img {
 				<td colspan=2><textarea style="width: 100%;" name="b_content" id="content" rows=3></textarea></td>
 			</tr>
 		</table>
+		<input type="hidden" name="b_image" class="b_image" />
 			<input type="hidden" name="b_movieinfo" class="movieinfo" /> 
 			<input type="hidden" name="b_title" class="title" />
 
@@ -321,8 +322,10 @@ img {
 		$("#myModal").css("display","none");
 		$(".title").val(title);
 		$(".movieinfo").val(html);
+		$(".b_image").val(image);
 		console.log(html);
 		console.log(title);
+		console.log(image);
 	});
 	
 	/* 모달: 컨텐트영역 밖 클릭시 닫기 */
@@ -336,6 +339,7 @@ img {
 		if($(".movieinfo").val()==""){
 			alert("영화 정보를 입력해주세요.")
 		}else{
+		
 			oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
 			$("#registForm").submit();
 			location.href="/main"

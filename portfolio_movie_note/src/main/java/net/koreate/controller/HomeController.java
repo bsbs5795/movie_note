@@ -49,12 +49,13 @@ public class HomeController {
 	@GetMapping("/main")
 	public void main() {}
 	
-	@GetMapping("/main/{uno}/{page}")
+	@GetMapping("/main/{u_num}/{page}")
 	@ResponseBody
 	public ResponseEntity<Map<String,Object>> listPage(
-			@PathVariable("uno") int u_num,
+			@PathVariable("u_num") int u_num,
 			@PathVariable("page") int page){
 		ResponseEntity<Map<String,Object>> entity = null;
+		System.out.println("BoardList 컨트롤러 요청");
 		
 		try {
 			Map<String,Object> map = new HashMap<>();

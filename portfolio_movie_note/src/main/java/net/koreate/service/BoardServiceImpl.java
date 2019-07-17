@@ -1,7 +1,9 @@
 package net.koreate.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -40,8 +42,13 @@ public class BoardServiceImpl implements BoardService{
 	@Override
 	public List<BoardVO> listBoard(int u_num ,PageMaker pageMaker) throws Exception {
 		List<BoardVO> list = new ArrayList<>();
-		dao.listBoard(u_num,pageMaker.getCri());
-		
+		Map<String,Object> map = new HashMap<String, Object>();
+		System.out.println(pageMaker.getCri().getPageStart());
+		System.out.println(pageMaker.getCri().getPerPageNum());
+		System.out.println(u_num);
+		map.put("u_num", u_num);
+		map.put("cri", pageMaker.getCri());
+		list = dao.listBoard(map);
 		return list;
 	}
 	@Override
