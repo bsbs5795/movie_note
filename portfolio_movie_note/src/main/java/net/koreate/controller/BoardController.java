@@ -36,8 +36,10 @@ public class BoardController {
 	}
 
 	@PostMapping("/register")
-	public void registerPOST(BoardVO vo) throws Exception {
+	public String registerPOST(BoardVO vo) throws Exception {
+		System.out.println("Controller 호출"+vo.toString());
 		bs.register(vo);
+		return "redirect:/main";
 	}
 	@GetMapping("/modify")
 	public void modify(int b_num, Model model) throws Exception {

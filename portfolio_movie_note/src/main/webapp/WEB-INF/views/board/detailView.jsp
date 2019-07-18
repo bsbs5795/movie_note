@@ -96,9 +96,10 @@
 <meta name="article:service_name" content="브런치" />
 <style>
 	#wrap_cover{
+	margin-top:60px;
 	width:100%;
-	height: -webkit-fill-available;
-	background: url('${boardVO.b_image}') no-repeat;
+	height: 500px;
+	background: url('${path}/resources/img/popcorn2.png') no-repeat;
 	background-size: cover; 
 	}
 </style>
@@ -121,7 +122,7 @@
 				<div class="wrap_item item_type_text"
 					data-app="{&quot;type&quot;:&quot;text&quot;,&quot;data&quot;:[{&quot;type&quot;:&quot;br&quot;}]}">
 					<table class="table table-hover table-bordered">
-						<tr>${boardVO.b_movieinfo}</tr>
+						<tr>${boardVO.b_movieinfo}<td></td></tr>
 					</table>
 				</div>
 				<div class="wrap_item item_type_text stars stars-example-fontawesome-o"
@@ -141,6 +142,7 @@
 							<option value=10>10</option>
 						</select> --%>
 						<span class="title your-rating"> 나의 평점: ${boardVO.b_rating} 점</span>
+						<hr/>
 						<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 						<script type="text/javascript" src="${path}/resources/js/table/jquery.barrating.min.js"></script>
 					<!-- 	<script>
@@ -200,6 +202,17 @@
 			<!-- 키워드, 댓글 버튼 끝 -->
 
 			<div class="article_body_bottom"></div>
+			<div id="disqus_thread" style="width:700px; margin : 0 auto; margin-bottom:50px;"></div>
+<script>
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://movie-note.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
 
 		</div>
 	</div>
@@ -260,4 +273,6 @@
 	<script type="text/javascript"
 		src="//t1.daumcdn.net/brunch/static/real/201907051641/product/B.ArticleLike.min.js"></script>
 </body>
+
+                            
 </html>

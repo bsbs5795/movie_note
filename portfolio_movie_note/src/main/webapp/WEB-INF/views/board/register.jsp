@@ -85,6 +85,10 @@ img {
 	display:none;
 }
 
+#wrap_keyword{
+margin-top:60px;
+background: url('${path}/resources/img/detailView.png') no-repeat;
+}
 </style>
 
 
@@ -341,7 +345,6 @@ img {
 		}else{
 			oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
 			$("#registForm").submit();
-			location.href="/main"
 		}
 	});
 </script>

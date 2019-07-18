@@ -35,7 +35,7 @@
 				</div>
 				<div class="wrap_side_service_menu logout">
 					<ul>
-						<li><a class="menu_word4 #side_home brunchHomeLink" href="#"><span class="bar_left"></span>내 영화노트<span class="bar_right"></span></a></li>
+						<li><a class="menu_word4 #side_home brunchHomeLink" href="/main"><span class="bar_left"></span>내 영화노트<span class="bar_right"></span></a></li>
 						<li><a class="menu_word5 #side_ready" href="#"><span class="bar_left"></span>작가의 서랍<span class="bar_right"></span></a></li>
 						<li class="hr"></li>
 						<li><a class="menu_word4 #side_brunch" href="/"><span class="bar_left"></span>영화노트 홈<span class="bar_right"></span></a></li>

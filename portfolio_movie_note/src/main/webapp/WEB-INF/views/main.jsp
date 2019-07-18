@@ -80,6 +80,11 @@
   	margin-left: auto;
   	margin-right: auto;
 	}
+	#wrap_keyword{
+	height:160px;
+	background: url('${path}/resources/img/main2.png') no-repeat;
+	margin-top:60px;
+}
 </style>
 </head>
 <body>
@@ -90,10 +95,8 @@
 
 		<div id="wrapHome" class="">
 			<div class="header_keyword">
-				<div id="wrap_keyword" class="none_keyword">
+				<div id="wrap_keyword" class="none_keyword" style="margin-top:60px;">
 					<!-- 연관키워드 없을 때 none_keyword 클래스 추가 -->
-					<h2 class="screen_out">글 키워드</h2>
-					<div class="wrap_keyword_name">영화리뷰</div>
 				</div>
 				<main>
 				<div class="wrap_contents">

@@ -72,4 +72,10 @@ public class HomeController {
 		return entity;
 	}
 	
+	@GetMapping(value="/reMain")
+	public String reMain() {
+		
+		return "redirect:/main";
+	}
+	
 }
