@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
 
 import net.koreate.vo.BoardVO;
@@ -24,4 +25,10 @@ public interface BoardDAO {
 	
 	@Select("SELECT count(*) FROM movie_board WHERE u_num = #{u_num}")
 	int getTotal(int uno);
+	
+	@Update("UPDATE movie_board SET b_available=0 WHERE b_num=#{b_num}")
+	void delete(int b_num);
+
+	@Update("UPDATE movie_board SET b_content=#{b_content} WHERE b_num=#{b_num}")
+	void modify(BoardVO vo);
 }

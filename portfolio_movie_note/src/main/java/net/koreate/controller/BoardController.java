@@ -39,6 +39,26 @@ public class BoardController {
 	public void registerPOST(BoardVO vo) throws Exception {
 		bs.register(vo);
 	}
+	@GetMapping("/modify")
+	public void modify(int b_num, Model model) throws Exception {
+		System.out.println("수정: " + b_num);
+		BoardVO vo = bs.modify(b_num);
+		model.addAttribute("boardVO", vo);
+	}
+	
+	@PostMapping("/modify")
+	public String modify(BoardVO vo) throws Exception{
+		System.out.println(vo);
+		bs.modify(vo);
+		return "redirect:/board/detailView/"+vo.getB_num();
+	}
+
+	@GetMapping("/delete")
+	public String delete(int b_num) {
+		System.out.println(b_num);
+		bs.delete(b_num);
+		return "redirect:/main";
+	}
 	@GetMapping("/detailView")
 	public void detailView() {
 		

@@ -18,4 +18,10 @@ public interface BoardService {
 	
 	BoardVO detailView(int b_num) throws Exception;
 	
+	void delete(int b_num);
+
+	BoardVO modify(int b_num) throws Exception;
+
+	void modify(BoardVO vo);
+	
 }

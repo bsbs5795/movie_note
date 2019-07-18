@@ -244,7 +244,7 @@
 								if(data.list[i].b_available == 0){
 			                           html += "<li class='list_has_image animation_up' style='display: none;'>";
 			                        }else{
-			                           html += "<li class='list_has_image animation_up>";
+			                           html += "<li class='list_has_image animation_up'>";
 			                        }
 								html += "<a href='/board/detailView/"+data.list[i].b_num+"' class='link_post'>";
 								html += "<div class='post_thumb'>";

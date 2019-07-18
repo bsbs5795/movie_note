@@ -56,5 +56,22 @@ public class BoardServiceImpl implements BoardService{
 		BoardVO vo = dao.detailView(b_num);
 		return vo;
 	}
+	@Override
+	public void delete(int b_num) {
+		dao.delete(b_num);
+	}
+
+
+
+	@Override
+	public BoardVO modify(int b_num) throws Exception {
+		BoardVO vo = dao.detailView(b_num);
+		return vo;
+	}
+
+	@Override
+	public void modify(BoardVO vo) {
+		dao.modify(vo);
+	}
 
 }

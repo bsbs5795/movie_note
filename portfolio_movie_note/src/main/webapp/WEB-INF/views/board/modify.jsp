@@ -43,7 +43,7 @@
 <script type="text/javascript" src="//t1.daumcdn.net/brunch/static/libraries/js/userAgent.min-1.0.14.js"></script>
 <script type="text/javascript" src="//t1.daumcdn.net/brunch/static/libraries/js/raven.min.3.17.0.js"></script>
 <script type="text/javascript" src="//t1.daumcdn.net/brunch/static/libraries/js/clipboard.min.js"></script>
-
+<script src="${pageContext.request.contextPath}/resources/editor/js/service/HuskyEZCreator.js"></script>
 <script type="text/javascript">
 	/**
 	 * Tiara 내부에서 사용 하는 Message Queue 정의
@@ -172,9 +172,13 @@
 							});
 							</script> -->
 				</div>
+				
 				<div class="wrap_item item_type_text"
 					data-app="{&quot;type&quot;:&quot;text&quot;,&quot;data&quot;:[{&quot;type&quot;:&quot;br&quot;}]}">
-					${boardVO.b_content}
+					<form action="/board/modify" id="modifyForm" method="POST">
+						<textarea style="width: 100%;" name="b_content" id="content" rows=3>${boardVO.b_content}</textarea>
+						<input type="hidden" name="b_num" value="${boardVO.b_num}"/>
+					</form>
 				</div>
 				<p class="wrap_item item_type_text"
 					data-app="{&quot;type&quot;:&quot;text&quot;,&quot;data&quot;:[{&quot;type&quot;:&quot;br&quot;}]}">
@@ -187,33 +191,34 @@
 				<div class="inner_body_info">
 					<span class="wrap_comment_btn">
 						<button type="button" class="btn_comment #p_comment_open" id="modify">
-							<span>수정</span>
-						</button>
-					</span>
-					<span class="wrap_comment_btn">
-						<button type="button" class="btn_comment #p_comment_open" id="delete">
-							<span>삭제</span>
+							<span>수정 완료</span>
 						</button>
 					</span>
 				</div>
 			</div>
+			
 			<!-- 키워드, 댓글 버튼 끝 -->
-
 			<div class="article_body_bottom"></div>
 
 		</div>
 	</div>
 
 	<script>
+	/* 에디터 */
+	var path = "${path}/resources/editor/SmartEditor2Skin.html";
+	var oEditors = [];
+	nhn.husky.EZCreator.createInIFrame({
+		oAppRef : oEditors,
+		elPlaceHolder :"content",
+		sSkinURI : path,
+		fCreator : "createSEditor2",
+		htParams: { fOnBeforeUnload : function(){}}
+	});
+	
 	$(function(){
 		$("#modify").click(function(){
-			location.href = "/board/modify?b_num=${boardVO.b_num}";
-		});
-		
-		$("#delete").click(function(){
-			if(confirm("정말 삭제하실건가요...?")){
-				location.href = "/board/delete?b_num=${boardVO.b_num}";
-			}
+			oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
+			$("#modifyForm").submit();
 		});
 	});
 	</script>
