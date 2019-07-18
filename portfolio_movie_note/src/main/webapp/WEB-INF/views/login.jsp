@@ -119,6 +119,10 @@
 .error {
 	color: red;
 }
+
+#loginLogo{
+	background: url(../../../resources/img/logo_img.png) no-repeat;
+}
 </style>
 <script>
 	var message = '${message}';
@@ -131,7 +135,7 @@
 		<div class="wrap_inner  ">
 			<div class="f_l">
 				<h1 class="f_l">
-					<a href="/login" class="logo_service text_hide" title="brunch">brunch</a>
+					<a href="/login" class="logo_service text_hide" id="loginLogo" title="brunch">brunch</a>
 				</h1>
 			</div>
 			<div class="f_r"></div>
@@ -141,7 +145,6 @@
 	<article id="mArticle">
 		<h2 id="daumBody" class="screen_out">영화노트 설정 본문</h2>
 		<div class="bg_start">
-			<img src="${path}/resources/img/popcorn.jpg">
 		</div>
 		<div class="layer_start layer_start_type1" id="loginMain">
 			<h3 class="tit_start">영화노트 시작하기</h3>

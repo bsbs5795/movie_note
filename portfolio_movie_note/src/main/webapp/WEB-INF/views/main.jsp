@@ -230,8 +230,6 @@
 </body>
 	<script>
 	
-	
-	
 	getPageList(1);
 
 	function getPageList(page) {

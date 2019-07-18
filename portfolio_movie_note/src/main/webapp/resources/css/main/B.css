@@ -595,7 +595,7 @@ address, caption, cite, code, dfn, em, var {
 .service_header.article.cover_type_text h1 .logo_service,
 .service_header.article.beyond_content h1 .logo_service {
 	display: block;
-	background: url(//t1.daumcdn.net/brunch/static/img/help/pc/logo_service2_v1.png) no-repeat;
+	background: url(../../../resources/img/logo_main_img.png) no-repeat;
 	width: 94px;
 	height: 22px;
 	margin-top: -1px;
