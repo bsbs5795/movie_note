@@ -6,7 +6,6 @@
 <c:set var="path" value="${pageContext.request.contextPath}"
 	scope="session" />
 
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
