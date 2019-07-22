@@ -52,10 +52,10 @@ public class HomeController {
 	@GetMapping("/main2")
 	public String main2(String keyword,Model model) {
 		model.addAttribute("keyword",keyword);
-		
 		return"/main2";
-		
 	}
+	@GetMapping("/myPage")
+	public void myPage() {}
 	
 	@GetMapping("/main/{u_num}/{page}")
 	@ResponseBody

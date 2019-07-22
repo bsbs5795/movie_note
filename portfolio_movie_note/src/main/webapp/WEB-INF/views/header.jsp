@@ -20,7 +20,7 @@
 		<div id="wrapSideMenu">
 			<main>
 				<div class="wrap_side_profile">
-					<a href="#" class="#side_my brunchHomeLink">
+					<a href="/myPage" class="#side_my brunchHomeLink">
 						<div class="wrap_profile_image">
 							<img class="img_profile" src="${userInfo.profile_image}" alt="프로필이미지">
 						</div>

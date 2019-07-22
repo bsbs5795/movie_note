@@ -105,12 +105,7 @@
 					<hr/>
 						<h4 class="screen_out">글 목록</h4>
 						<div class="wrap_article_list #keyword_related_contents" id="boardList">
-									
-	
-
 						</div>
-						
-					
 						<div class="wrap_writer_list animation_up_late">
 							<strong class="tit_recommend">추천작가</strong>
 							<div class="search_recommend">
@@ -241,6 +236,7 @@
 							console.log(data.list);
 							var html = "<ul class='list_article list_common'>"
 							for (var i = 0; i < data.list.length; i++) {
+								var date = formatDate(data.list[i].b_regdate);
 								if(data.list[i].b_available == 0){
 			                           html += "<li class='list_has_image animation_up' style='display: none;'>";
 			                        }else{
@@ -260,7 +256,10 @@
 								html += "<div class='wrap_sub_content'>";
 								html += "<span class='article_content'>"
 										+ data.list[i].b_content + "</span>";
-								html += "</div></div></a></li>";
+						
+								html += "</div>";
+								html +="<div style='float : right; margin-top : 44px;'><span><strong>작성자</strong> 김아무개 | "+date+" </span></div>";
+								html +="</div></a></li>";
 							}
 							html+="</ul>"
 							console.log(data.pageMaker);
@@ -292,6 +291,10 @@
 		getSearchPageList(page);
 		});
 	
-	
+	function formatDate(date) { 
+		var d = new Date(date), month = '' + (d.getMonth() + 1), day = '' + d.getDate(), year = d.getFullYear();
+		if (month.length < 2) month = '0' + month; 
+		if (day.length < 2) day = '0' + day; 
+		return [year, month, day].join('-'); }
 </script>
 </html>
