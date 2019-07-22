@@ -2,6 +2,7 @@ package net.koreate.util;
 
 public class Criteria {
 	
+	private String keyword;
 	private int page;			// 현재 페이지
 	private int perPageNum;		// 한번에 보여줄 게시글의 개수
 	
@@ -11,6 +12,14 @@ public class Criteria {
 		System.out.println("CRI 기본 생성자 호출");
 	}
 	
+	public String getKeword() {
+		return keyword;
+	}
+
+	public void setKeword(String keword) {
+		this.keyword = keword;
+	}
+
 	public Criteria(int page, int perPageNum) {
 		this.page = page;
 		this.perPageNum = perPageNum;

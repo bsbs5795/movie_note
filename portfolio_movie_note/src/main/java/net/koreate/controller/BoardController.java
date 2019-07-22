@@ -1,6 +1,7 @@
 package net.koreate.controller;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
@@ -13,7 +14,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import net.koreate.service.BoardService;
@@ -103,5 +103,24 @@ public class BoardController {
 		}
 		return entity;
 	}
-
+	@GetMapping("/search/{keyword}")
+	public ResponseEntity<Map<String,Object>> searchPage(@PathVariable("keyword") String keyword){
+		ResponseEntity<Map<String,Object>> entity = null;
+		
+		try {
+			Map<String,Object>map = new HashMap<>();
+			PageMaker pageMaker = bs.getSearchPageMaker(keyword, 1);
+			List<BoardVO> list = bs.searchListBoard(pageMaker);
+			map.put("pageMaker", pageMaker);
+			map.put("list", list);
+			entity = new ResponseEntity<Map<String,Object>>(map,HttpStatus.OK);
+		} catch (Exception e) {
+			e.printStackTrace();
+			entity = new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
+		
+		return entity;
+	}
+	
+	
 }

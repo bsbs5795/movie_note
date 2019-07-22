@@ -37,6 +37,17 @@ public class BoardServiceImpl implements BoardService{
 		
 		return pageMaker;
 	}
+	@Override
+	public PageMaker getSearchPageMaker(String keyword,int page) throws Exception {
+		Criteria cri = new Criteria(page,5);
+		cri.setKeword(keyword);
+		int totalCount = dao.getSeachTotal(keyword);
+		PageMaker pageMaker = new PageMaker();
+		pageMaker.setCri(cri);
+		pageMaker.setTotalCount(totalCount);
+		
+		return pageMaker;
+	}
 
 		
 	@Override
@@ -72,6 +83,14 @@ public class BoardServiceImpl implements BoardService{
 	@Override
 	public void modify(BoardVO vo) {
 		dao.modify(vo);
+	}
+
+	@Override
+	public List<BoardVO> searchListBoard(PageMaker pageMaker) {
+		List<BoardVO> list = new ArrayList<>();
+		list = dao.searchListBoard(pageMaker.getCri());
+		
+		return list;
 	}
 
 }

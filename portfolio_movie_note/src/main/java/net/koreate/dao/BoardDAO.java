@@ -8,6 +8,8 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
 
+import net.koreate.util.Criteria;
+import net.koreate.util.PageMaker;
 import net.koreate.vo.BoardVO;
 
 @Repository
@@ -31,4 +33,10 @@ public interface BoardDAO {
 
 	@Update("UPDATE movie_board SET b_content=#{b_content} WHERE b_num=#{b_num}")
 	void modify(BoardVO vo);
+	
+	@Select("SELECT * FROM movie_board WHERE b_title LIKE CONCAT('%',#{keyword},'%') ORDER BY b_num DESC limit #{pageStart}, #{perPageNum}")
+	List<BoardVO> searchListBoard(Criteria cri);
+
+	@Select("SELECT count(*) FROM movie_board WHERE b_title LIKE CONCAT('%',#{keyword},'%')")
+	int getSeachTotal(String keyword);
 }

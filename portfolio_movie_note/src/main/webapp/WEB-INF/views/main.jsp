@@ -289,5 +289,41 @@
 	var page = $(this).attr("href");
 	getPageList(page);
 		});
+	
+	$("#searchBtn").click(function(){
+		var keyword = $("#keyword").val();
+		console.log(keyword);
+				$.getJSON("/board/search/"+keyword,function(data){
+							console.log(data);
+							var html = "<ul class='list_article list_common'>"
+							for (var i = 0; i < data.list.length; i++) {
+								if(data.list[i].b_available == 0){
+			                           html += "<li class='list_has_image animation_up' style='display: none;'>";
+			                        }else{
+			                           html += "<li class='list_has_image animation_up'>";
+			                        }
+								html += "<a href='/board/detailView/"+data.list[i].b_num+"' class='link_post'>";
+								html += "<div class='post_thumb'>";
+								if (data.list[i].b_image == "") {
+									html += "<img src='/resources/img/noimg.jpg' width='120' height='120' class='img_thumb'>";
+								}else{
+									html += "<img src='"+data.list[i].b_image+"' width='120' height='120' class='img_thumb'>";
+								}
+								html += "</div>";
+								html += "<div class='post_title has_image'>";
+								html += "<strong class='tit_subject'>"
+										+ data.list[i].b_title + "</strong>";
+								html += "<div class='wrap_sub_content'>";
+								html += "<span class='article_content'>"
+										+ data.list[i].b_content + "</span>";
+								html += "</div></div></a></li>";
+							}
+							html+="</ul>"
+							console.log(data.pageMaker);
+							$("#boardList").html(html);
+							printPage(data.pageMaker);
+						});
+	});
+	
 </script>
 </html>

@@ -9,8 +9,8 @@
 				</div>
 				<div class="f_r">
 					<div class="wrap_btn_search ">
-						<input name="q" id="searchQuery" type="text" placeholder="검색어를 입력해 주세요" autocomplete="off" value="" />
-						<button id="btnServiceMenuSearch" type="button" class="f_r img_ico text_hide btn_search #search_btn">검색</button>
+						<input name="keyword" id="keyword" type="text" placeholder="검색어를 입력해 주세요" autocomplete="off" value="" style="opacity: 1; margin-left: 37px;"/>
+						<button id="searchBtn" type="button" class="f_r img_ico text_hide btn_search #search_btn" style="margin-right: 172px;">검색</button>
 					</div>
 				</div>
 			</div>
@@ -46,3 +46,7 @@
 				</div>
 			</main>
 				</div>
+				
+				<script>
+			
+				</script>

@@ -23,5 +23,9 @@ public interface BoardService {
 	BoardVO modify(int b_num) throws Exception;
 
 	void modify(BoardVO vo);
+
+	List<BoardVO> searchListBoard(PageMaker pageMaker);
+
+	PageMaker getSearchPageMaker(String keyword, int page) throws Exception;
 	
 }
