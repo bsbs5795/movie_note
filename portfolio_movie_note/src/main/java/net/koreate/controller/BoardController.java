@@ -43,7 +43,6 @@ public class BoardController {
 	}
 	@GetMapping("/modify")
 	public void modify(int b_num, Model model) throws Exception {
-		System.out.println("수정: " + b_num);
 		BoardVO vo = bs.modify(b_num);
 		model.addAttribute("boardVO", vo);
 	}

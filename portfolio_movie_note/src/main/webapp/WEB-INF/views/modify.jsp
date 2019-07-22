@@ -106,21 +106,19 @@
 					<div id="wrapArticle" class="wrap_article" style="margin: 150px auto;">
 						<h4 class="screen_out">글 목록</h4>
 						<div class="wrap_article_list #keyword_related_contents" id="boardList" style="margin-left: 180px;">
-							<img class="img_profile" id ="#profile_img" src="${userInfo.profile_image}" style="width: 60px;height: 60px;margin-left: 27px;float:left; border-radius: 60px;">
+							<img class="img_profile" src="${userInfo.profile_image}" style="margin-left: 27px; float:left;">
 							<div style="margin-left: 200px; font-size: 15px;">
-								<p><strong>이메일 : ${userInfo.u_id}</strong></p>  <br/>
-								
-								<p><strong>이름(닉네임) : ${userInfo.u_name}</strong></p>
+							<table style="text-align: center;">
+							<tr>
+								<td>이메일</td> <td><input type="text" value="${userInfo.u_id}"/></td>
+								</tr>
+								<tr>
+								<td>이름(닉네임)</td>  <td><input type="text" value="${userInfo.u_name}"/></td>
+								</tr>
+								</table> 
 							</div>
-							<div class="filebox" style="margin-top: 15px; clear: both;">
-							<c:if test="${userInfo.u_pw != null}">
-							<label for="profile_img">프로필 사진 변경</label>
-							</c:if>
-						<!-- 	<input type="button"  class="btn-info" value="기본이미지"> -->
-							<input type="file" id="profile_img"accept=".gif,.jpg,.png" value="프로필 사진 변경" onchange="profileUpload(this.files)">
-							<input type="button" class="btn btn-info" value="회원정보 수정" onclick="location.href='/user/modify'">
-							<input type="button" class="btn btn-info" value="확인" onclick="location.href = '/main'">
-							<input type="hidden" name="profile_image" id="#uimage" value="${userInfo.profile_image}"/>
+							<div class="filebox" style="margin-top: 30px;clear: both;margin-left: 300px;">
+							<input type="button" class="btn btn-info" value="수정 완료">
 							</div>
 						</div>
 						
@@ -160,66 +158,4 @@
 			href="http://www.apple.com/kr/safari/">safari</a>
 	</div>
 </body>
-<script>
-
-
-function profileUpload(files){
-	console.log(files.length);
-	var formData = new FormData();
-	console.log(files[0]);
-	formData.append("file",files[0]);
-	
-	$.ajax({
-		url : '/file/profileImage',
-		data : formData,
-		dataType : "text",
-		processData : false,
-		contentType : false,
-		type : "POST",
-		success : function(result){
-			console.log(result);
-			// 업로드된 이미지 보여주기
-			$("#profime_img").attr("src","/resources/upload"+result);
-			
-			var file = $("#uimage");
-			if(file.val() !="/resources/img/img_profile.png"){
-				// 업로드된 기존 이미지 삭제
-				console.log("not null"+file.val());
-				deleteFile(file.val(),result);
-			}else{
-				//새로 업로드된 이미지 경로 추가
-				file.val(result);	
-			}
-			
-			$("#deleteImage").fadeIn("fast");
-			
-			//$("#joinForm").append('<input type="hidden" id="uimage" class="temp" name="uimage" value="'+result+'" />');
-			
-		}
-	});
-}
-
-
-// 기존의 이미지 삭제
-function deleteFile(fileName,newFile){
-	var target = $(this);
-	$.ajax({
-		url : "/file/deleteFile",
-		type : "post",
-		data : {fileName : fileName},
-		dataType : "text",
-		success : function(result){
-			console.log(result);
-			 $("#uimage").val(newFile);
-		}
-	});
-}
-
-$("#deleteImage").click(function(){
-	deleteFile($("#uimage").val(),'');
-	$("#profile_img").attr("src","/resources/img/non_image.png");
-	$("#uimage").val("/resources/img/img_profile.png");
-	$(this).fadeOut("fast");
-});
-</script>
 </html>

@@ -54,8 +54,6 @@ public class HomeController {
 		model.addAttribute("keyword",keyword);
 		return"/main2";
 	}
-	@GetMapping("/myPage")
-	public void myPage() {}
 	
 	@GetMapping("/main/{u_num}/{page}")
 	@ResponseBody

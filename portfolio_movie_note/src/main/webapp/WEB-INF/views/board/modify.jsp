@@ -96,9 +96,10 @@
 <meta name="article:service_name" content="브런치" />
 <style>
 	#wrap_cover{
+	margin-top:60px;
 	width:100%;
-	height: -webkit-fill-available;
-	background: url('${boardVO.b_image}') no-repeat;
+	height: 500px;
+	background: url('${path}/resources/img/popcorn2.png') no-repeat;
 	background-size: cover; 
 	}
 </style>

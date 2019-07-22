@@ -258,7 +258,7 @@
 								type="password" class="form-control signUp" id="re-password"
 								placeholder="비밀번호 확인" autocomplete="off" alt="비밀번호 확인">
 							<input name="profile_image" type="hidden"
-								value="../../resources/img/img_profile.png" />
+								value="/resources/img/img_profile.png" />
 						</div>
 						<div class="form-group">
 							<p>

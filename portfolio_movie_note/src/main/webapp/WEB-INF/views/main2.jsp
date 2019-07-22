@@ -109,7 +109,7 @@
 						<div class="wrap_writer_list animation_up_late">
 							<strong class="tit_recommend">추천작가</strong>
 							<div class="search_recommend">
-								<a class="item_recommend" href="/@@3VJ"> <span
+								<a class="item_recommend" href="#"> <span
 									class="thumb_g"> <img
 										src="//img1.daumcdn.net/thumb/C42x42/?fname=http://t1.daumcdn.net/brunch/service/user/3VJ/image/Jcg399h9krRgZ3hJ2gqTVqwmC7s"
 										width="36" height="36" class="img_thumb" alt="책방아저씨">
@@ -122,7 +122,7 @@
 											</span>
 										</div>
 									</div>
-								</a> <a class="item_recommend" href="/@@lR2"> <span
+								</a> <a class="item_recommend" href="#"> <span
 									class="thumb_g"> <img
 										src="//img1.daumcdn.net/thumb/C42x42/?fname=http://t1.daumcdn.net/brunch/service/user/lR2/image/zV2sEM1l6leMedLGTmAVfad5PAg.jpg"
 										width="36" height="36" class="img_thumb" alt="마음달 안정현">
@@ -135,7 +135,7 @@
 											</span>
 										</div>
 									</div>
-								</a> <a class="item_recommend" href="/@@2ub"> <span
+								</a> <a class="item_recommend" href="#"> <span
 									class="thumb_g"> <img
 										src="//img1.daumcdn.net/thumb/C42x42/?fname=http://u1.daumcdn.net/brunch/service/user/2ub/image/G7vXmN5nx_kqzaMmz0CtZhisFKA"
 										width="36" height="36" class="img_thumb" alt="차칸양">
@@ -148,7 +148,7 @@
 											</span>
 										</div>
 									</div>
-								</a> <a class="item_recommend" href="/@@3b5"> <span
+								</a> <a class="item_recommend" href="#"> <span
 									class="thumb_g"> <img
 										src="//img1.daumcdn.net/thumb/C42x42/?fname=http://t1.daumcdn.net/brunch/service/user/3b5/image/nZf1Ui_VESVfc1TjS4lG2imzzBs.JPG"
 										width="36" height="36" class="img_thumb" alt="금요일 흐림">
@@ -161,7 +161,7 @@
 											</span>
 										</div>
 									</div>
-								</a> <a class="item_recommend" href="/@@cBh"> <span
+								</a> <a class="item_recommend" href="#"> <span
 									class="thumb_g"> <img
 										src="//img1.daumcdn.net/thumb/C42x42/?fname=http://t1.daumcdn.net/brunch/service/user/cBh/image/1G7X-ekt7mgNecLzyxCuKM5e7I0.png"
 										width="36" height="36" class="img_thumb" alt="깐 KKan">
@@ -174,7 +174,7 @@
 											</span>
 										</div>
 									</div>
-								</a> <a class="item_recommend" href="/@@mW7"> <span
+								</a> <a class="item_recommend" href="#"> <span
 									class="thumb_g"> <img
 										src="//img1.daumcdn.net/thumb/C42x42/?fname=http://t1.daumcdn.net/brunch/service/user/mW7/image/-WgIMadJuCBYAqdRhymL-fY8am4.JPG"
 										width="36" height="36" class="img_thumb" alt="김동진">
