@@ -226,15 +226,12 @@
 			class="ico_browser ico_safari text_hide" target="_blank"
 			href="http://www.apple.com/kr/safari/">safari</a>
 	</div>
-	<input type="hidden" id="keyword" value="영화리뷰">
 	<input type="hidden" id="keywordType" value="single">
 	<input type="hidden" id="keywordParam" value="영화리뷰">
 	<input type="hidden" id="pickContentId" value="">
 </body>
 	<script>
-	
-	getPageList(1);
-
+	getPageList(1);	
 	function getPageList(page) {
 		var u_num = ${userInfo.u_num}
 		console.log(u_num);
@@ -269,6 +266,8 @@
 							printPage(data.pageMaker)
 						});
 	}
+
+		
 	function printPage(pageMaker){
 		var str = "<ul id='pagination' class='pagination'>";
 		if(pageMaker.prev){

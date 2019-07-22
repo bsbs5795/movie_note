@@ -642,10 +642,10 @@ address, caption, cite, code, dfn, em, var {
 }
 
 .service_header .wrap_btn_search input {
-	display: none;
-}
+	display: inline-block;
+}	
 
-.service_header .wrap_btn_search.show input {
+.service_header .wrap_btn_search .show input {
 	display: inline-block;
 	border: 0 none;
 	margin-left: 40px;
