@@ -101,6 +101,8 @@
 				<main>
 				<div class="wrap_contents">
 					<div id="wrapArticle" class="wrap_article">
+					<div><h3 style="color: chocolate;">'${keyword}' 검색한 결과</h3></div>
+					<hr/>
 						<h4 class="screen_out">글 목록</h4>
 						<div class="wrap_article_list #keyword_related_contents" id="boardList">
 									
@@ -226,17 +228,17 @@
 			class="ico_browser ico_safari text_hide" target="_blank"
 			href="http://www.apple.com/kr/safari/">safari</a>
 	</div>
+	<input type="hidden" id="searchKeyword" value="${keyword}"/>
 	<input type="hidden" id="keywordType" value="single">
 	<input type="hidden" id="keywordParam" value="영화리뷰">
 	<input type="hidden" id="pickContentId" value="">
 </body>
 	<script>
-	 getPageList(1);	
-	function getPageList(page) {
-		var u_num = ${userInfo.u_num}
-		console.log(u_num);
-				$.getJSON("/main/"+u_num+"/"+page,function(data) {
-							console.log(data);
+	getSearchPageList(1);
+	function getSearchPageList(page) {
+		var keyword =$("#searchKeyword").val();
+				$.getJSON("/board/search/"+keyword+"/"+page,function(data){
+							console.log(data.list);
 							var html = "<ul class='list_article list_common'>"
 							for (var i = 0; i < data.list.length; i++) {
 								if(data.list[i].b_available == 0){
@@ -263,11 +265,10 @@
 							html+="</ul>"
 							console.log(data.pageMaker);
 							$("#boardList").html(html);
-							printPage(data.pageMaker)
+							printPage(data.pageMaker);
 						});
 	}
-
-		
+	
 	function printPage(pageMaker){
 		var str = "<ul id='pagination' class='pagination'>";
 		if(pageMaker.prev){
@@ -284,11 +285,13 @@
 		$("#paging").html(str);  
 	}
 	
+	
 	$("#paging").on("click","ul li a",function(event){
 	event.preventDefault();
 	var page = $(this).attr("href");
-	getPageList(page);
+		getSearchPageList(page);
 		});
+	
 	
 </script>
 </html>

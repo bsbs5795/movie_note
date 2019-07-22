@@ -49,6 +49,14 @@ public class HomeController {
 	@GetMapping("/main")
 	public void main() {}
 	
+	@GetMapping("/main2")
+	public String main2(String keyword,Model model) {
+		model.addAttribute("keyword",keyword);
+		
+		return"/main2";
+		
+	}
+	
 	@GetMapping("/main/{u_num}/{page}")
 	@ResponseBody
 	public ResponseEntity<Map<String,Object>> listPage(

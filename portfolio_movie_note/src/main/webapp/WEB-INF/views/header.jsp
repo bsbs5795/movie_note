@@ -9,8 +9,10 @@
 				</div>
 				<div class="f_r">
 					<div class="wrap_btn_search ">
+					<form action="/main2">
 						<input name="keyword" id="keyword" type="text" placeholder="검색어를 입력해 주세요" autocomplete="off" value="" style="opacity: 1; margin-left: 37px; display: inline-block;"/>
-						<button id="searchBtn" type="button" class="f_r img_ico text_hide btn_search #search_btn" style="margin-right: 172px;">검색</button>
+						<button id="searchBtn" type="submit" class="f_r img_ico text_hide btn_search #search_btn" style="margin-right: 172px;" >검색</button>
+						</form>
 					</div>
 				</div>
 			</div>

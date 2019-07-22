@@ -103,13 +103,14 @@ public class BoardController {
 		}
 		return entity;
 	}
-	@GetMapping("/search/{keyword}")
-	public ResponseEntity<Map<String,Object>> searchPage(@PathVariable("keyword") String keyword){
+	@GetMapping("/search/{keyword}/{page}")
+	public ResponseEntity<Map<String,Object>> searchPage(@PathVariable("keyword") String keyword,@PathVariable("page") int page){
 		ResponseEntity<Map<String,Object>> entity = null;
+		System.out.println("keyword : "+keyword);
 		
 		try {
 			Map<String,Object>map = new HashMap<>();
-			PageMaker pageMaker = bs.getSearchPageMaker(keyword, 1);
+			PageMaker pageMaker = bs.getSearchPageMaker(keyword,page);
 			List<BoardVO> list = bs.searchListBoard(pageMaker);
 			map.put("pageMaker", pageMaker);
 			map.put("list", list);
